@@ -1,0 +1,389 @@
+
+PSS(R)E PROGRAM APPLICATION GUIDE EXAMPLE
+BASE CASE INCLUDING SEQUENCE DATA
+
+The Saved Case in file savcnv.sav was saved on TUE, JAN 26 2016  20:50
+
+The following option settings are changed to the settings contained in the Saved Case File:
+
+** [OPF] APPLY FUEL COST OBJECTIVE option setting set to YES
+
+** [OPF] APPLY ADJUSTABLE BRANCH REACTANCE OBJECTIVE option setting set to YES
+
+** [OPF] CONSTRAIN INTERFACE FLOWS option setting set to YES
+
+** [OPF] AUTOMATIC SCALING option setting set to YES
+
+** [OPF] DUAL VARIABLE CONVERGENCE CRITERIA option setting set to YES
+
+** [OPF] NUMBER OF BAD ITERATIONS WHEN MU>-2 option setting set to 10
+
+** [OPF] NUMBER OF BAD ITERATIONS WHEN MU<=-2 option setting set to 20
+
+** [OPF] PRODUCE AN OPF LOG FILE option setting set to YES
+
+** [OPF] ADD SOLUTION DETAILS TO OPF LOG FILE option setting set to YES
+
+The Snapshot at TIME = 0.0 in file savnw.snp was saved on TUE, JAN 26 2016  20:50
+
+NUMBER OF ELEMENTS RESTORED:
+  CONS STATES   VARS  ICONS CHANNELS
+   177     63     16     14     41
+
+23 diagonal and 41 off-diagonal elements
+
+    PTI INTERACTIVE POWER SYSTEM SIMULATOR--PSS(R)E     MON, FEB 13 2017  11:40
+PSS(R)E PROGRAM APPLICATION GUIDE EXAMPLE
+BASE CASE INCLUDING SEQUENCE DATA
+
+INITIAL CONDITION LOAD FLOW USED 1 ITERATIONS
+
+----------------------------- MACHINE INITIAL CONDITIONS -----------------------------
+  BUS#-SCT X-- NAME --X BASKV ID  ETERM   EFD    POWER    VARS   P.F.  ANGLE   ID     IQ
+   101     NUC-A       21.600 1  1.0200 2.0563  750.00   81.20 0.9942  63.47 0.6571 0.4934
+   102     NUC-B       21.600 1  1.0200 2.0563  750.00   81.20 0.9942  63.47 0.6571 0.4934
+   206     URBGEN      18.000 1  1.0236 2.5618  800.00  600.00 0.8000  23.53 0.8733 0.4380
+   211     HYDRO_G     20.000 1  1.0404 1.6150  600.00   17.74 0.9996  42.14 0.4089 0.6827
+  3011     MINE_G      13.800 1  1.0400 1.4655  258.66  104.04 0.9278  16.02 0.1648 0.2114
+  3018     CATDOG_G    13.800 1  1.0218 2.9374  100.00   80.00 0.7809  22.53 0.8757 0.4033
+
+INITIAL CONDITIONS CHECK O.K.
+
+Channel output file is "D:\PTI\EXAMPLE\dyntools_demo_bus154_fault.out"
+
+Channel output file is "D:\PTI\EXAMPLE\dyntools_demo_bus154_fault.out"
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+-0.0167   63.466     ANG1NUC-A                          42.143     ANG1HYDRO
+    3     23.526     ANG1URBGEN                         16.019     ANG1MINE
+    5     22.534     ANG1CATDOG                         7.5000      P 1NUC-A
+    7     6.0000      P 1HYDRO                          8.0000      P 1URBGEN
+    9     2.5866      P 1MINE                           1.0000      P 1CATDOG
+   11    0.81197      Q 1NUC-A                         0.17741      Q 1HYDRO
+   13     6.0000      Q 1URBGEN                         1.0404      Q 1MINE
+   15    0.80000      Q 1CATDOG                         1.0200     ET 1NUC-A
+   17     1.0404     ET 1HYDRO                          1.0236     ET 1URBGEN
+   19     1.0400     ET 1MINE                           1.0218     ET 1CATDOG
+   21     2.0563     EFD1NUC-A                          1.6150     EFD1HYDRO
+   23     2.5618     EFD1URBGEN                         1.4655     EFD1MINE
+   25     2.9374     EFD1CATDOG                         0.0000     SPD1NUC-A
+   27     0.0000     SPD1HYDRO                          0.0000     SPD1URBGEN
+   29     0.0000     SPD1MINE                           0.0000     SPD1CATDOG
+   31    0.84008     PM 1NUC-A                         0.83392     PM 1HYDRO
+   33    0.80954     PM 1URBGEN                         1.0400       V-HYDRO
+   35    0.94901       V-SUB230                         606.93     M  201-  204
+   37     434.40     M  205-  154                      0.17711     R  201-  204
+   39    1.97723E-02 X  201-  204                      0.16939     R  205-  154
+   41    0.11955     X  205-  154
+
+ 1.0000   63.466       42.143       23.526       16.019       22.534       7.5000
+    7     6.0000       8.0000       2.5866       1.0000      0.81197      0.17741
+   13     6.0000       1.0404      0.80000       1.0200       1.0404       1.0236
+   19     1.0400       1.0218       2.0563       1.6150       2.5618       1.4655
+   25     2.9374      1.39077E-08 -1.88749E-09  8.94067E-10  2.58701E-09 -3.47694E-09
+   31    0.84008      0.83392      0.80954       1.0400      0.94901       606.93
+   37     434.40      0.17711      1.97723E-02  0.16939      0.11955
+
+*** Shunt " 1" at bus 154 [DOWNTN      230.00] (  0.0000,-0.20000E+10) added ***
+
+Channel output file is "D:\PTI\EXAMPLE\dyntools_demo_bus154_fault.out"
+
+23 diagonal and 41 off-diagonal elements
+
+TIME = 1.0000: RELAY2 CKT 1  FROM    201 [HYDRO       500.00] TO    204 [SUB500      500.00]
+    ENTERING CIRCLE C.  MW =   99.3  MVAR =  509.0  VOLTAGE = 0.5688
+
+TIME = 1.0000: RELAY2 CKT 1  FROM    205 [SUB230      230.00] TO    154 [DOWNTN      230.00]
+    ENTERING CIRCLE B.  MW =   51.0  MVAR =  514.5  VOLTAGE = 0.1315
+
+TIME = 1.0000: RELAY2 CKT 1  FROM    201 [HYDRO       500.00] TO    204 [SUB500      500.00]
+    ENTERING CIRCLE C.  MW =   99.3  MVAR =  509.0  VOLTAGE = 0.5688
+
+TIME = 1.0000: RELAY2 CKT 1  FROM    205 [SUB230      230.00] TO    154 [DOWNTN      230.00]
+    ENTERING CIRCLE B.  MW =   51.0  MVAR =  514.5  VOLTAGE = 0.1315
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+ 1.0000   63.466     ANG1NUC-A                          42.143     ANG1HYDRO
+    3     23.526     ANG1URBGEN                         16.019     ANG1MINE
+    5     22.534     ANG1CATDOG                         1.8386      P 1NUC-A
+    7    0.87112      P 1HYDRO                         0.75347      P 1URBGEN
+    9    0.55314      P 1MINE                          0.18046      P 1CATDOG
+   11     7.0440      Q 1NUC-A                          6.6665      Q 1HYDRO
+   13     13.832      Q 1URBGEN                         7.2690      Q 1MINE
+   15     1.3680      Q 1CATDOG                        0.77468     ET 1NUC-A
+   17    0.75655     ET 1HYDRO                         0.50003     ET 1URBGEN
+   19    0.73293     ET 1MINE                          0.45983     ET 1CATDOG
+   21     2.0563     EFD1NUC-A                          1.6150     EFD1HYDRO
+   23     2.5618     EFD1URBGEN                         1.4655     EFD1MINE
+   25     2.9374     EFD1CATDOG                        1.39077E-08 SPD1NUC-A
+   27   -1.88749E-09 SPD1HYDRO                         8.94067E-10 SPD1URBGEN
+   29    2.58701E-09 SPD1MINE                         -3.47694E-09 SPD1CATDOG
+   31    0.84008     PM 1NUC-A                         0.83392     PM 1HYDRO
+   33    0.80954     PM 1URBGEN                        0.56879       V-HYDRO
+   35    0.13155       V-SUB230                         518.64     M  201-  204
+   37     517.03     M  205-  154                      1.19462E-02 R  201-  204
+   39    6.12245E-02 X  201-  204                      3.30096E-04 R  205-  154
+   41    3.33058E-03 X  205-  154
+
+ 1.0500   65.491       44.072       27.011       16.918       25.151       1.7085
+    7    0.16366      0.56826      0.20789      0.14269       5.0681       5.9122
+   13     8.8066       5.3310      0.88364      0.66149      0.68009      0.40091
+   19    0.62344      0.37297       2.3476       5.0000       2.7274       2.9895
+   25     4.0000      3.89673E-03  3.81311E-03  6.78277E-03  1.79405E-03  5.12763E-03
+   31    0.81163      0.83260      0.79313      0.49518      0.10853       397.30
+   37     351.93      1.08130E-02  6.07634E-02  3.30098E-04  3.33058E-03
+
+*** Shunt " 1" at bus 154 [DOWNTN      230.00] (  0.0000,-0.20000E+10) deleted ***
+
+Channel output file is "D:\PTI\EXAMPLE\dyntools_demo_bus154_fault.out"
+
+23 diagonal and 41 off-diagonal elements
+
+TIME = 1.0500: RELAY2 CKT 1  FROM    201 [HYDRO       500.00] TO    204 [SUB500      500.00]
+    OUT OF ALL CIRCLES.  MW =  456.8  MVAR =  110.1  VOLTAGE = 0.8566
+
+TIME = 1.0500: RELAY2 CKT 1  FROM    205 [SUB230      230.00] TO    154 [DOWNTN      230.00]
+    OUT OF ALL CIRCLES.  MW =  334.8  MVAR =  122.6  VOLTAGE = 0.7543
+
+TIME = 1.0500: RELAY2 CKT 1  FROM    201 [HYDRO       500.00] TO    204 [SUB500      500.00]
+    OUT OF ALL CIRCLES.  MW =  456.8  MVAR =  110.1  VOLTAGE = 0.8566
+
+TIME = 1.0500: RELAY2 CKT 1  FROM    205 [SUB230      230.00] TO    154 [DOWNTN      230.00]
+    OUT OF ALL CIRCLES.  MW =  334.8  MVAR =  122.6  VOLTAGE = 0.7543
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+ 1.0500   65.491     ANG1NUC-A                          44.072     ANG1HYDRO
+    3     27.011     ANG1URBGEN                         16.918     ANG1MINE
+    5     25.151     ANG1CATDOG                         6.1922      P 1NUC-A
+    7     4.0521      P 1HYDRO                          7.3059      P 1URBGEN
+    9     1.5536      P 1MINE                          0.78333      P 1CATDOG
+   11     1.0244      Q 1NUC-A                          1.8662      Q 1HYDRO
+   13     3.5563      Q 1URBGEN                         1.3142      Q 1MINE
+   15    0.49204      Q 1CATDOG                        0.84143     ET 1NUC-A
+   17    0.89870     ET 1HYDRO                         0.80588     ET 1URBGEN
+   19    0.86613     ET 1MINE                          0.81518     ET 1CATDOG
+   21     2.3476     EFD1NUC-A                          5.0000     EFD1HYDRO
+   23     2.7274     EFD1URBGEN                         2.9895     EFD1MINE
+   25     4.0000     EFD1CATDOG                        3.89673E-03 SPD1NUC-A
+   27    3.81311E-03 SPD1HYDRO                         6.78277E-03 SPD1URBGEN
+   29    1.79405E-03 SPD1MINE                          5.12763E-03 SPD1CATDOG
+   31    0.81163     PM 1NUC-A                         0.83260     PM 1HYDRO
+   33    0.79313     PM 1URBGEN                        0.85663       V-HYDRO
+   35    0.75426       V-SUB230                         469.90     M  201-  204
+   37     356.51     M  205-  154                      0.15182     R  201-  204
+   39    3.65806E-02 X  201-  204                      0.14984     R  205-  154
+   41    5.48867E-02 X  205-  154
+
+ 5.0000   111.46       89.922       71.359       63.735       69.851       7.5296
+    7     5.9786       7.9804       2.5677      0.99845      0.82358      0.18464
+   13     5.9867       1.0256      0.82609       1.0201       1.0406       1.0233
+   19     1.0394       1.0240       2.0888       1.6197       2.5645       1.4626
+   25     2.9571     -1.33266E-04 -1.09875E-04 -7.42577E-05  1.45403E-05 -2.02764E-05
+   31    0.84259      0.83259      0.80794       1.0399      0.94887       607.72
+   37     433.43      0.17685      1.98330E-02  0.16982      0.11964
+
+PSS(R)E PROGRAM APPLICATION GUIDE EXAMPLE
+BASE CASE INCLUDING SEQUENCE DATA
+
+The Saved Case in file savcnv.sav was saved on TUE, JAN 26 2016  20:50
+
+The Snapshot at TIME = 0.0 in file savnw.snp was saved on TUE, JAN 26 2016  20:50
+
+NUMBER OF ELEMENTS RESTORED:
+  CONS STATES   VARS  ICONS CHANNELS
+   177     63     16     14     41
+
+23 diagonal and 41 off-diagonal elements
+
+    PTI INTERACTIVE POWER SYSTEM SIMULATOR--PSS(R)E     MON, FEB 13 2017  11:40
+PSS(R)E PROGRAM APPLICATION GUIDE EXAMPLE
+BASE CASE INCLUDING SEQUENCE DATA
+
+INITIAL CONDITION LOAD FLOW USED 1 ITERATIONS
+
+----------------------------- MACHINE INITIAL CONDITIONS -----------------------------
+  BUS#-SCT X-- NAME --X BASKV ID  ETERM   EFD    POWER    VARS   P.F.  ANGLE   ID     IQ
+   101     NUC-A       21.600 1  1.0200 2.0563  750.00   81.20 0.9942  63.47 0.6571 0.4934
+   102     NUC-B       21.600 1  1.0200 2.0563  750.00   81.20 0.9942  63.47 0.6571 0.4934
+   206     URBGEN      18.000 1  1.0236 2.5618  800.00  600.00 0.8000  23.53 0.8733 0.4380
+   211     HYDRO_G     20.000 1  1.0404 1.6150  600.00   17.74 0.9996  42.14 0.4089 0.6827
+  3011     MINE_G      13.800 1  1.0400 1.4655  258.66  104.04 0.9278  16.02 0.1648 0.2114
+  3018     CATDOG_G    13.800 1  1.0218 2.9374  100.00   80.00 0.7809  22.53 0.8757 0.4033
+
+INITIAL CONDITIONS CHECK O.K.
+
+Channel output file is "D:\PTI\EXAMPLE\dyntools_demo_bus3018_gentrip.out"
+
+Channel output file is "D:\PTI\EXAMPLE\dyntools_demo_bus3018_gentrip.out"
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+-0.0167   63.466     ANG1NUC-A                          42.143     ANG1HYDRO
+    3     23.526     ANG1URBGEN                         16.019     ANG1MINE
+    5     22.534     ANG1CATDOG                         7.5000      P 1NUC-A
+    7     6.0000      P 1HYDRO                          8.0000      P 1URBGEN
+    9     2.5866      P 1MINE                           1.0000      P 1CATDOG
+   11    0.81197      Q 1NUC-A                         0.17741      Q 1HYDRO
+   13     6.0000      Q 1URBGEN                         1.0404      Q 1MINE
+   15    0.80000      Q 1CATDOG                         1.0200     ET 1NUC-A
+   17     1.0404     ET 1HYDRO                          1.0236     ET 1URBGEN
+   19     1.0400     ET 1MINE                           1.0218     ET 1CATDOG
+   21     2.0563     EFD1NUC-A                          1.6150     EFD1HYDRO
+   23     2.5618     EFD1URBGEN                         1.4655     EFD1MINE
+   25     2.9374     EFD1CATDOG                         0.0000     SPD1NUC-A
+   27     0.0000     SPD1HYDRO                          0.0000     SPD1URBGEN
+   29     0.0000     SPD1MINE                           0.0000     SPD1CATDOG
+   31    0.84008     PM 1NUC-A                         0.83392     PM 1HYDRO
+   33    0.80954     PM 1URBGEN                         1.0400       V-HYDRO
+   35    0.94901       V-SUB230                         606.93     M  201-  204
+   37     434.40     M  205-  154                      0.17711     R  201-  204
+   39    1.97723E-02 X  201-  204                      0.16939     R  205-  154
+   41    0.11955     X  205-  154
+
+ 1.0000   63.466       42.143       23.526       16.019       22.534       7.5000
+    7     6.0000       8.0000       2.5866       1.0000      0.81197      0.17741
+   13     6.0000       1.0404      0.80000       1.0200       1.0404       1.0236
+   19     1.0400       1.0218       2.0563       1.6150       2.5618       1.4655
+   25     2.9374      1.39077E-08 -1.88749E-09  8.94067E-10  2.58701E-09 -3.47694E-09
+   31    0.84008      0.83392      0.80954       1.0400      0.94901       606.93
+   37     434.40      0.17711      1.97723E-02  0.16939      0.11955
+
+*** Status of machine "1" at bus 3018 [CATDOG_G    13.800] is set to out-of-service ***
+
+Channel output file is "D:\PTI\EXAMPLE\dyntools_demo_bus3018_gentrip.out"
+
+23 diagonal and 41 off-diagonal elements
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+ 1.0000   63.466     ANG1NUC-A                          42.143     ANG1HYDRO
+    3     23.526     ANG1URBGEN                         16.019     ANG1MINE
+    5     0.0000     ANG1CATDOG                         7.5116      P 1NUC-A
+    7     6.0341      P 1HYDRO                          8.2349      P 1URBGEN
+    9     2.7701      P 1MINE                           0.0000      P 1CATDOG
+   11     1.0134      Q 1NUC-A                         0.38334      Q 1HYDRO
+   13     6.2983      Q 1URBGEN                         1.2967      Q 1MINE
+   15     0.0000      Q 1CATDOG                         1.0127     ET 1NUC-A
+   17     1.0326     ET 1HYDRO                          1.0132     ET 1URBGEN
+   19     1.0302     ET 1MINE                           0.0000     ET 1CATDOG
+   21     2.0563     EFD1NUC-A                          1.6150     EFD1HYDRO
+   23     2.5618     EFD1URBGEN                         1.4655     EFD1MINE
+   25     0.0000     EFD1CATDOG                        1.39077E-08 SPD1NUC-A
+   27   -1.88749E-09 SPD1HYDRO                         8.94067E-10 SPD1URBGEN
+   29    2.58701E-09 SPD1MINE                           0.0000     SPD1CATDOG
+   31    0.84008     PM 1NUC-A                         0.83392     PM 1HYDRO
+   33    0.80954     PM 1URBGEN                         1.0282       V-HYDRO
+   35    0.93436       V-SUB230                         608.11     M  201-  204
+   37     482.59     M  205-  154                      0.17241     R  201-  204
+   39    2.21867E-02 X  201-  204                      0.14803     R  205-  154
+   41    0.10399     X  205-  154
+
+ 5.0000  -39.197      -60.923      -79.947      -88.325       0.0000       7.7673
+    7     6.0539       8.1554       2.5745       0.0000       1.0558      0.39053
+   13     6.4106       1.3535       0.0000       1.0196       1.0398       1.0214
+   19     1.0397       0.0000       2.1445       1.6817       2.6447       1.5252
+   25     0.0000     -1.45140E-03 -1.45924E-03 -1.45738E-03 -1.47674E-03   0.0000
+   31    0.86914      0.84062      0.82516       1.0351      0.94154       620.92
+   37     486.07      0.17121      2.15786E-02  0.14842      0.10600
+
+PSS(R)E PROGRAM APPLICATION GUIDE EXAMPLE
+BASE CASE INCLUDING SEQUENCE DATA
+
+The Saved Case in file savcnv.sav was saved on TUE, JAN 26 2016  20:50
+
+The Snapshot at TIME = 0.0 in file savnw.snp was saved on TUE, JAN 26 2016  20:50
+
+NUMBER OF ELEMENTS RESTORED:
+  CONS STATES   VARS  ICONS CHANNELS
+   177     63     16     14     41
+
+23 diagonal and 41 off-diagonal elements
+
+    PTI INTERACTIVE POWER SYSTEM SIMULATOR--PSS(R)E     MON, FEB 13 2017  11:40
+PSS(R)E PROGRAM APPLICATION GUIDE EXAMPLE
+BASE CASE INCLUDING SEQUENCE DATA
+
+INITIAL CONDITION LOAD FLOW USED 1 ITERATIONS
+
+----------------------------- MACHINE INITIAL CONDITIONS -----------------------------
+  BUS#-SCT X-- NAME --X BASKV ID  ETERM   EFD    POWER    VARS   P.F.  ANGLE   ID     IQ
+   101     NUC-A       21.600 1  1.0200 2.0563  750.00   81.20 0.9942  63.47 0.6571 0.4934
+   102     NUC-B       21.600 1  1.0200 2.0563  750.00   81.20 0.9942  63.47 0.6571 0.4934
+   206     URBGEN      18.000 1  1.0236 2.5618  800.00  600.00 0.8000  23.53 0.8733 0.4380
+   211     HYDRO_G     20.000 1  1.0404 1.6150  600.00   17.74 0.9996  42.14 0.4089 0.6827
+  3011     MINE_G      13.800 1  1.0400 1.4655  258.66  104.04 0.9278  16.02 0.1648 0.2114
+  3018     CATDOG_G    13.800 1  1.0218 2.9374  100.00   80.00 0.7809  22.53 0.8757 0.4033
+
+INITIAL CONDITIONS CHECK O.K.
+
+Channel output file is "D:\PTI\EXAMPLE\dyntools_demo_brn3005_3007_trip.out"
+
+Channel output file is "D:\PTI\EXAMPLE\dyntools_demo_brn3005_3007_trip.out"
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+-0.0167   63.466     ANG1NUC-A                          42.143     ANG1HYDRO
+    3     23.526     ANG1URBGEN                         16.019     ANG1MINE
+    5     22.534     ANG1CATDOG                         7.5000      P 1NUC-A
+    7     6.0000      P 1HYDRO                          8.0000      P 1URBGEN
+    9     2.5866      P 1MINE                           1.0000      P 1CATDOG
+   11    0.81197      Q 1NUC-A                         0.17741      Q 1HYDRO
+   13     6.0000      Q 1URBGEN                         1.0404      Q 1MINE
+   15    0.80000      Q 1CATDOG                         1.0200     ET 1NUC-A
+   17     1.0404     ET 1HYDRO                          1.0236     ET 1URBGEN
+   19     1.0400     ET 1MINE                           1.0218     ET 1CATDOG
+   21     2.0563     EFD1NUC-A                          1.6150     EFD1HYDRO
+   23     2.5618     EFD1URBGEN                         1.4655     EFD1MINE
+   25     2.9374     EFD1CATDOG                         0.0000     SPD1NUC-A
+   27     0.0000     SPD1HYDRO                          0.0000     SPD1URBGEN
+   29     0.0000     SPD1MINE                           0.0000     SPD1CATDOG
+   31    0.84008     PM 1NUC-A                         0.83392     PM 1HYDRO
+   33    0.80954     PM 1URBGEN                         1.0400       V-HYDRO
+   35    0.94901       V-SUB230                         606.93     M  201-  204
+   37     434.40     M  205-  154                      0.17711     R  201-  204
+   39    1.97723E-02 X  201-  204                      0.16939     R  205-  154
+   41    0.11955     X  205-  154
+
+ 1.0000   63.466       42.143       23.526       16.019       22.534       7.5000
+    7     6.0000       8.0000       2.5866       1.0000      0.81197      0.17741
+   13     6.0000       1.0404      0.80000       1.0200       1.0404       1.0236
+   19     1.0400       1.0218       2.0563       1.6150       2.5618       1.4655
+   25     2.9374      1.39077E-08 -1.88749E-09  8.94067E-10  2.58701E-09 -3.47694E-09
+   31    0.84008      0.83392      0.80954       1.0400      0.94901       606.93
+   37     434.40      0.17711      1.97723E-02  0.16939      0.11955
+
+*** Status of circuit "1" from 3005 [WEST        230.00] to 3007 [RURAL       230.00] is set to out-of-service ***
+
+Channel output file is "D:\PTI\EXAMPLE\dyntools_demo_brn3005_3007_trip.out"
+
+23 diagonal and 40 off-diagonal elements
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+ 1.0000   63.466     ANG1NUC-A                          42.143     ANG1HYDRO
+    3     23.526     ANG1URBGEN                         16.019     ANG1MINE
+    5     22.534     ANG1CATDOG                         7.4434      P 1NUC-A
+    7     5.9615      P 1HYDRO                          8.0991      P 1URBGEN
+    9     2.2438      P 1MINE                           1.0767      P 1CATDOG
+   11    0.84519      Q 1NUC-A                         0.23125      Q 1HYDRO
+   13     6.1548      Q 1URBGEN                        0.93963      Q 1MINE
+   15    0.83494      Q 1CATDOG                         1.0194     ET 1NUC-A
+   17     1.0388     ET 1HYDRO                          1.0184     ET 1URBGEN
+   19     1.0448     ET 1MINE                           1.0019     ET 1CATDOG
+   21     2.0563     EFD1NUC-A                          1.6150     EFD1HYDRO
+   23     2.5618     EFD1URBGEN                         1.4655     EFD1MINE
+   25     2.9374     EFD1CATDOG                        1.39077E-08 SPD1NUC-A
+   27   -1.88749E-09 SPD1HYDRO                         8.94067E-10 SPD1URBGEN
+   29    2.58701E-09 SPD1MINE                         -3.47694E-09 SPD1CATDOG
+   31    0.84008     PM 1NUC-A                         0.83392     PM 1HYDRO
+   33    0.80954     PM 1URBGEN                         1.0372       V-HYDRO
+   35    0.94158       V-SUB230                         617.83     M  201-  204
+   37     481.82     M  205-  154                      0.17262     R  201-  204
+   39    2.28767E-02 X  201-  204                      0.15108     R  205-  154
+   41    0.10503     X  205-  154
+
+ 5.0000   101.99       80.723       61.246       56.884       57.250       7.4236
+    7     5.9817       7.9469       2.5886      0.99782      0.81151      0.23361
+   13     6.2847      0.80009      0.97637       1.0200       1.0405       1.0228
+   19     1.0402       1.0170       2.0449       1.6269       2.6064       1.4177
+   25     3.2891      4.21832E-04  4.23390E-04  4.24738E-04  4.29984E-04  4.13514E-04
+   31    0.83162      0.83154      0.80460       1.0389      0.94444       622.08
+   37     477.69      0.17209      2.19352E-02  0.15080      0.11011
+
+** LINES PER PAGE for REPORT WINDOW set to 10000000

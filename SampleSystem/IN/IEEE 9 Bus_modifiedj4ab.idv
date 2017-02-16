@@ -1,0 +1,61 @@
+BAT_MACHINE_ARRAY_CHANNEL, -1, 1, 2, "1", "ANGL     2[BUS 2       18.000]1" ;
+BAT_MACHINE_ARRAY_CHANNEL, -1, 1, 3, "1", "ANGL     3[BUS 3       13.800]1" ;
+BAT_MACHINE_ARRAY_CHANNEL, -1, 2, 2, "1", "POWR     2[BUS 2       18.000]1" ;
+BAT_MACHINE_ARRAY_CHANNEL, -1, 2, 3, "1", "POWR     3[BUS 3       13.800]1" ;
+BAT_MACHINE_ARRAY_CHANNEL, -1, 3, 2, "1", "VARS     2[BUS 2       18.000]1" ;
+BAT_MACHINE_ARRAY_CHANNEL, -1, 3, 3, "1", "VARS     3[BUS 3       13.800]1" ;
+BAT_MACHINE_ARRAY_CHANNEL, -1, 4, 2, "1", "ETRM     2[BUS 2       18.000]1" ;
+BAT_MACHINE_ARRAY_CHANNEL, -1, 4, 3, "1", "ETRM     3[BUS 3       13.800]1" ;
+BAT_MACHINE_ARRAY_CHANNEL, -1, 5, 2, "1", "EFD      2[BUS 2       18.000]1" ;
+BAT_MACHINE_ARRAY_CHANNEL, -1, 5, 3, "1", "EFD      3[BUS 3       13.800]1" ;
+BAT_MACHINE_ARRAY_CHANNEL, -1, 6, 2, "1", "PMEC     2[BUS 2       18.000]1" ;
+BAT_MACHINE_ARRAY_CHANNEL, -1, 6, 3, "1", "PMEC     3[BUS 3       13.800]1" ;
+BAT_MACHINE_ARRAY_CHANNEL, -1, 7, 2, "1", "SPD      2[BUS 2       18.000]1" ;
+BAT_MACHINE_ARRAY_CHANNEL, -1, 7, 3, "1", "SPD      3[BUS 3       13.800]1" ;
+BAT_BUS_FREQUENCY_CHANNEL, -1, 2, "FREQ      2 [BUS 2       18.000]" ;
+BAT_BUS_FREQUENCY_CHANNEL, -1, 3, "FREQ      3 [BUS 3       13.800]" ;
+BAT_VOLTAGE_CHANNEL, -1, -1, -1, 2, "VOLT      2 [BUS 2       18.000]" ;
+BAT_VOLTAGE_CHANNEL, -1, -1, -1, 3, "VOLT      3 [BUS 3       13.800]" ;
+BAT_MACHINE_ARRAY_CHANNEL, -1, 1, 2, "1", "ANGL     2[BUS 2       18.000]1" ;
+BAT_MACHINE_ARRAY_CHANNEL, -1, 1, 3, "1", "ANGL     3[BUS 3       13.800]1" ;
+BAT_VOLTAGE_CHANNEL, -1, -1, -1, 2, "VOLT      2 [BUS 2       18.000]" ;
+BAT_VOLTAGE_CHANNEL, -1, -1, -1, 3, "VOLT      3 [BUS 3       13.800]" ;
+BAT_VOLTAGE_CHANNEL, -1, -1, -1, 7, "VOLT      7 [BUS 7       230.00]" ;
+BAT_VOLTAGE_CHANNEL, -1, -1, -1, 8, "VOLT      8 [BUS 8       230.00]" ;
+BAT_VOLTAGE_CHANNEL, -1, -1, -1, 9, "VOLT      9 [BUS 9       230.00]" ;
+BAT_VOLTAGE_CHANNEL, -1, -1, -1, 10, "VOLT     10 [10          34.500]" ;
+BAT_VOLTAGE_CHANNEL, -1, -1, -1, 11, "VOLT     11 [11          138.00]" ;
+BAT_VOLTAGE_CHANNEL, -1, -1, -1, 12, "VOLT     12 [12          34.500]" ;
+BAT_BRANCH_P_AND_Q_CHANNEL, -1, -1, -1, 2, 7, "1", "POWR      2 TO      7 CKT '1 '",
+"VARS      2 TO      7 CKT '1 '" ;
+BAT_BRANCH_P_AND_Q_CHANNEL, -1, -1, -1, 3, 9, "1", "POWR      3 TO      9 CKT '1 '",
+"VARS      3 TO      9 CKT '1 '" ;
+BAT_BRANCH_P_AND_Q_CHANNEL, -1, -1, -1, 7, 2, "1", "POWR      7 TO      2 CKT '1 '",
+"VARS      7 TO      2 CKT '1 '" ;
+BAT_BRANCH_P_AND_Q_CHANNEL, -1, -1, -1, 7, 8, "1", "POWR      7 TO      8 CKT '1 '",
+"VARS      7 TO      8 CKT '1 '" ;
+BAT_BRANCH_P_AND_Q_CHANNEL, -1, -1, -1, 7, 9, "1", "POWR      7 TO      9 CKT '1 '",
+"VARS      7 TO      9 CKT '1 '" ;
+BAT_BRANCH_P_AND_Q_CHANNEL, -1, -1, -1, 8, 7, "1", "POWR      8 TO      7 CKT '1 '",
+"VARS      8 TO      7 CKT '1 '" ;
+BAT_BRANCH_P_AND_Q_CHANNEL, -1, -1, -1, 8, 9, "1", "POWR      8 TO      9 CKT '1 '",
+"VARS      8 TO      9 CKT '1 '" ;
+BAT_BRANCH_P_AND_Q_CHANNEL, -1, -1, -1, 8, 11, "1", "POWR      8 TO     11 CKT '1 '",
+"VARS      8 TO     11 CKT '1 '" ;
+BAT_BRANCH_P_AND_Q_CHANNEL, -1, -1, -1, 9, 3, "1", "POWR      9 TO      3 CKT '1 '",
+"VARS      9 TO      3 CKT '1 '" ;
+BAT_BRANCH_P_AND_Q_CHANNEL, -1, -1, -1, 9, 7, "1", "POWR      9 TO      7 CKT '1 '",
+"VARS      9 TO      7 CKT '1 '" ;
+BAT_BRANCH_P_AND_Q_CHANNEL, -1, -1, -1, 9, 8, "1", "POWR      9 TO      8 CKT '1 '",
+"VARS      9 TO      8 CKT '1 '" ;
+BAT_BRANCH_P_AND_Q_CHANNEL, -1, -1, -1, 9, 10, "1", "POWR      9 TO     10 CKT '1 '",
+"VARS      9 TO     10 CKT '1 '" ;
+BAT_BRANCH_P_AND_Q_CHANNEL, -1, -1, -1, 10, 9, "1", "POWR     10 TO      9 CKT '1 '",
+"VARS     10 TO      9 CKT '1 '" ;
+BAT_BRANCH_P_AND_Q_CHANNEL, -1, -1, -1, 10, 12, "1", "POWR     10 TO     12 CKT '1 '",
+"VARS     10 TO     12 CKT '1 '" ;
+BAT_BRANCH_P_AND_Q_CHANNEL, -1, -1, -1, 11, 8, "1", "POWR     11 TO      8 CKT '1 '",
+"VARS     11 TO      8 CKT '1 '" ;
+BAT_BRANCH_P_AND_Q_CHANNEL, -1, -1, -1, 12, 10, "1", "POWR     12 TO     10 CKT '1 '",
+"VARS     12 TO     10 CKT '1 '" ;
+@END

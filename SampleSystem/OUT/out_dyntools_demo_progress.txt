@@ -1,0 +1,80 @@
+
+
+
+
+The Saved Case in file C:\Users\jonathans\PycharmProjects\PSSEDYN\SampleSystem\IN\IEEE 9 Bus_modifiedj4ab.sav was saved on TUE, FEB 14 2017  13:08
+
+The following option settings are changed to the settings contained in the Saved Case File:
+
+** NON-TRANSFORMER BRANCH PERCENT LOADING UNITS option setting set to MVA
+
+The Snapshot at TIME = 20.00811 in file C:\Users\jonathans\PycharmProjects\PSSEDYN\SampleSystem\IN\IEEE 9 Bus_modifiedj4ab.snp was saved on TUE, FEB 14 2017  13:30
+
+NUMBER OF ELEMENTS RESTORED:
+  CONS STATES   VARS  ICONS CHANNELS
+   112     62     54     70     18
+
+6 diagonal and 6 off-diagonal elements
+
+Model GENROU Bus 2 [BUS 2       18.000] Machine "1 " :
+    X''D = .210000, imaginary part of complex machine impedance (ZSORCE) = .185000, differ by > .500000E-05
+
+Model GENROU Bus 3 [BUS 3       13.800] Machine "1 " :
+    X''D = .210000, imaginary part of complex machine impedance (ZSORCE) = .134000, differ by > .500000E-05
+
+    PTI INTERACTIVE POWER SYSTEM SIMULATOR--PSS(R)E     TUE, FEB 14 2017  14:12
+
+
+
+INITIAL CONDITION LOAD FLOW USED 1 ITERATIONS
+
+----------------------------- MACHINE INITIAL CONDITIONS -----------------------------
+  BUS#-SCT X-- NAME --X BASKV ID  ETERM   EFD    POWER    VARS   P.F.  ANGLE   ID     IQ
+     2     BUS 2       18.000 1  0.9699 0.5954   -0.19  -57.86-0.0033 -91.98-0.2209-0.0010
+     3     BUS 3       13.800 1  1.0748 2.5675   40.57   26.81 0.8342 -78.32 0.2560 0.2558
+
+INITIAL CONDITIONS CHECK O.K.
+
+Channel output file is "C:\Users\jonathans\PycharmProjects\PSSEDYN\SampleSystem\OUT\out_dyntools_demo_bus154_fault.out"
+
+Channel output file is "C:\Users\jonathans\PycharmProjects\PSSEDYN\SampleSystem\OUT\out_dyntools_demo_bus154_fault.out"
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+-0.0167  -91.985     ANGL     2[BUS 2       18.000]1   -78.323     ANGL     3[BUS 3       13.800]1
+    3   -1.89741E-03 POWR     2[BUS 2       18.000]1   0.40567     POWR     3[BUS 3       13.800]1
+    5   -0.57861     VARS     2[BUS 2       18.000]1   0.26814     VARS     3[BUS 3       13.800]1
+    7    0.96994     ETRM     2[BUS 2       18.000]1    1.0748     ETRM     3[BUS 3       13.800]1
+    9    0.59545     EFD      2[BUS 2       18.000]1    2.5675     EFD      3[BUS 3       13.800]1
+   11   -6.24640E-04 PMEC     2[BUS 2       18.000]1   0.32506     PMEC     3[BUS 3       13.800]1
+   13     0.0000     SPD      2[BUS 2       18.000]1    0.0000     SPD      3[BUS 3       13.800]1
+   15     0.0000     FREQ      2 [BUS 2       18.000]   0.0000     FREQ      3 [BUS 3       13.800]
+   17    0.96994     VOLT      2 [BUS 2       18.000]   1.0748     VOLT      3 [BUS 3       13.800]
+
+41.6517  -91.985      -78.323     -1.89733E-03  0.40567     -0.57861      0.26814
+    7    0.96994       1.0748      0.59545       2.5675     -6.24640E-04  0.32506
+   13   -5.92958E-09  1.69883E-08 -9.71388E-30 -1.69993E-29  0.96994       1.0748
+
+83.3184  -91.985      -78.323     -1.89705E-03  0.40567     -0.57861      0.26814
+    7    0.96994       1.0748      0.59545       2.5675     -6.24640E-04  0.32506
+   13    4.16988E-09 -1.69620E-08 -5.33608E-09 -9.33815E-09  0.96994       1.0748
+
+124.975  -91.985      -78.323     -1.89765E-03  0.40567     -0.57861      0.26814
+    7    0.96994       1.0748      0.59545       2.5675     -6.24640E-04  0.32506
+   13   -2.83816E-09  9.93403E-09 -2.31558E-34  2.25625E-11  0.96994       1.0748
+
+166.631  -91.985      -78.323     -1.89723E-03  0.40567     -0.57861      0.26814
+    7    0.96994       1.0748      0.59545       2.5675     -6.24640E-04  0.32506
+   13   -2.88141E-10 -3.43479E-09 -1.27201E-13 -2.22601E-13  0.96994       1.0748
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+200.007  -91.985     ANGL     2[BUS 2       18.000]1   -78.323     ANGL     3[BUS 3       13.800]1
+    3   -1.89748E-03 POWR     2[BUS 2       18.000]1   0.40567     POWR     3[BUS 3       13.800]1
+    5   -0.57861     VARS     2[BUS 2       18.000]1   0.26814     VARS     3[BUS 3       13.800]1
+    7    0.96994     ETRM     2[BUS 2       18.000]1    1.0748     ETRM     3[BUS 3       13.800]1
+    9    0.59545     EFD      2[BUS 2       18.000]1    2.5675     EFD      3[BUS 3       13.800]1
+   11   -6.24640E-04 PMEC     2[BUS 2       18.000]1   0.32506     PMEC     3[BUS 3       13.800]1
+   13    4.60049E-09 SPD      2[BUS 2       18.000]1  -1.73056E-08 SPD      3[BUS 3       13.800]1
+   15    3.06314E-27 FREQ      2 [BUS 2       18.000]  3.04591E-22 FREQ      3 [BUS 3       13.800]
+   17    0.96994     VOLT      2 [BUS 2       18.000]   1.0748     VOLT      3 [BUS 3       13.800]
+
+No power flow data changed for load "1" at bus 11 [11          138.00]

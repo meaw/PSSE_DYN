@@ -1,0 +1,673 @@
+
+
+
+
+The Saved Case in file C:\Users\jonathans\PycharmProjects\PSSEDYN\SampleSystem\IN\3bus.sav was saved on MON, FEB 13 2017  17:49
+
+The following option settings are changed to the settings contained in the Saved Case File:
+
+** NON-TRANSFORMER BRANCH PERCENT LOADING UNITS option setting set to MVA
+
+Channel 1 : bus 101 not found
+
+Channel 2 : bus 211 not found
+
+Channel 3 : bus 206 not found
+
+Channel 4 : bus 3011 not found
+
+Channel 5 : bus 3018 not found
+
+Channel 6 : bus 101 not found
+
+Channel 7 : bus 211 not found
+
+Channel 8 : bus 206 not found
+
+Channel 9 : bus 3011 not found
+
+Channel 10 : bus 3018 not found
+
+Channel 11 : bus 101 not found
+
+Channel 12 : bus 211 not found
+
+Channel 13 : bus 206 not found
+
+Channel 14 : bus 3011 not found
+
+Channel 15 : bus 3018 not found
+
+Channel 16 : bus 101 not found
+
+Channel 17 : bus 211 not found
+
+Channel 18 : bus 206 not found
+
+Channel 19 : bus 3011 not found
+
+Channel 20 : bus 3018 not found
+
+Channel 21 : bus 101 not found
+
+Channel 22 : bus 211 not found
+
+Channel 23 : bus 206 not found
+
+Channel 24 : bus 3011 not found
+
+Channel 25 : bus 3018 not found
+
+Channel 26 : bus 101 not found
+
+Channel 27 : bus 211 not found
+
+Channel 28 : bus 206 not found
+
+Channel 29 : bus 3011 not found
+
+Channel 30 : bus 3018 not found
+
+Channel 31 : bus 101 not found
+
+Channel 32 : bus 211 not found
+
+Channel 33 : bus 206 not found
+
+The Snapshot at TIME = -0.01667 in file C:\Users\jonathans\PycharmProjects\PSSEDYN\SampleSystem\IN\3bus_dyn.snp was saved on MON, FEB 13 2017  17:36
+
+NUMBER OF ELEMENTS RESTORED:
+  CONS STATES   VARS  ICONS CHANNELS
+    56     20      2      0     41
+Ordering network...
+Diagonals = 6   Off-diagonals = 6   Maximum size = 12
+
+6 diagonal and 6 off-diagonal elements
+
+    PTI INTERACTIVE POWER SYSTEM SIMULATOR--PSS(R)E     MON, FEB 13 2017  17:50
+
+
+
+INITIAL CONDITION LOAD FLOW USED 1 ITERATIONS
+
+----------------------------- MACHINE INITIAL CONDITIONS -----------------------------
+  BUS#-SCT X-- NAME --X BASKV ID  ETERM   EFD    POWER    VARS   P.F.  ANGLE   ID     IQ
+     2     BUS 2       18.000 1  1.0250 1.0045  -19.92  -26.53-0.6003  -4.05-0.0867-0.0827
+     3     BUS 3       13.800 1  1.0345 1.0114   30.00  -20.00 0.8321  21.24-0.0861 0.2652
+
+INITIAL CONDITIONS CHECK O.K.
+
+Channel output file is "C:\Users\jonathans\PycharmProjects\PSSEDYN\out_dyntools_demo_bus154_fault.out"
+
+Channel output file is "C:\Users\jonathans\PycharmProjects\PSSEDYN\out_dyntools_demo_bus154_fault.out"
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+-0.0167   0.0000     ANG1NUC-A                          0.0000     ANG1HYDRO
+    3     0.0000     ANG1URBGEN                         0.0000     ANG1MINE
+    5     0.0000     ANG1CATDOG                         0.0000      P 1NUC-A
+    7     0.0000      P 1HYDRO                          0.0000      P 1URBGEN
+    9     0.0000      P 1MINE                           0.0000      P 1CATDOG
+   11     0.0000      Q 1NUC-A                          0.0000      Q 1HYDRO
+   13     0.0000      Q 1URBGEN                         0.0000      Q 1MINE
+   15     0.0000      Q 1CATDOG                         0.0000     ET 1NUC-A
+   17     0.0000     ET 1HYDRO                          0.0000     ET 1URBGEN
+   19     0.0000     ET 1MINE                           0.0000     ET 1CATDOG
+   21     0.0000     EFD1NUC-A                          0.0000     EFD1HYDRO
+   23     0.0000     EFD1URBGEN                         0.0000     EFD1MINE
+   25     0.0000     EFD1CATDOG                         0.0000     SPD1NUC-A
+   27     0.0000     SPD1HYDRO                          0.0000     SPD1URBGEN
+   29     0.0000     SPD1MINE                           0.0000     SPD1CATDOG
+   31     0.0000     PM 1NUC-A                          0.0000     PM 1HYDRO
+   33     0.0000     PM 1URBGEN                         0.0000       V-HYDRO
+   35     0.0000       V-SUB230                         0.0000     M  201-  204
+   37     0.0000     M  205-  154                       0.0000     R  201-  204
+   39     0.0000     X  201-  204                       0.0000     R  205-  154
+   41     0.0000     X  205-  154
+
+ 5.0000   0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+    7     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   13     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   19     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   25     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   31     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   37     0.0000       0.0000       0.0000       0.0000       0.0000
+
+*** Shunt " 1" at bus 8 [BUS 8       230.00] (  0.0000,-0.20000E+10) added ***
+
+Channel output file is "C:\Users\jonathans\PycharmProjects\PSSEDYN\out_dyntools_demo_bus154_fault.out"
+
+6 diagonal and 6 off-diagonal elements
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+ 5.0000   0.0000     ANG1NUC-A                          0.0000     ANG1HYDRO
+    3     0.0000     ANG1URBGEN                         0.0000     ANG1MINE
+    5     0.0000     ANG1CATDOG                         0.0000      P 1NUC-A
+    7     0.0000      P 1HYDRO                          0.0000      P 1URBGEN
+    9     0.0000      P 1MINE                           0.0000      P 1CATDOG
+   11     0.0000      Q 1NUC-A                          0.0000      Q 1HYDRO
+   13     0.0000      Q 1URBGEN                         0.0000      Q 1MINE
+   15     0.0000      Q 1CATDOG                         0.0000     ET 1NUC-A
+   17     0.0000     ET 1HYDRO                          0.0000     ET 1URBGEN
+   19     0.0000     ET 1MINE                           0.0000     ET 1CATDOG
+   21     0.0000     EFD1NUC-A                          0.0000     EFD1HYDRO
+   23     0.0000     EFD1URBGEN                         0.0000     EFD1MINE
+   25     0.0000     EFD1CATDOG                         0.0000     SPD1NUC-A
+   27     0.0000     SPD1HYDRO                          0.0000     SPD1URBGEN
+   29     0.0000     SPD1MINE                           0.0000     SPD1CATDOG
+   31     0.0000     PM 1NUC-A                          0.0000     PM 1HYDRO
+   33     0.0000     PM 1URBGEN                         0.0000       V-HYDRO
+   35     0.0000       V-SUB230                         0.0000     M  201-  204
+   37     0.0000     M  205-  154                       0.0000     R  201-  204
+   39     0.0000     X  201-  204                       0.0000     R  205-  154
+   41     0.0000     X  205-  154
+
+ 5.0250   0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+    7     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   13     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   19     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   25     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   31     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   37     0.0000       0.0000       0.0000       0.0000       0.0000
+
+*** Shunt " 1" at bus 8 [BUS 8       230.00] (  0.0000,-0.20000E+10) deleted ***
+
+Channel output file is "C:\Users\jonathans\PycharmProjects\PSSEDYN\out_dyntools_demo_bus154_fault.out"
+
+6 diagonal and 6 off-diagonal elements
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+ 5.0250   0.0000     ANG1NUC-A                          0.0000     ANG1HYDRO
+    3     0.0000     ANG1URBGEN                         0.0000     ANG1MINE
+    5     0.0000     ANG1CATDOG                         0.0000      P 1NUC-A
+    7     0.0000      P 1HYDRO                          0.0000      P 1URBGEN
+    9     0.0000      P 1MINE                           0.0000      P 1CATDOG
+   11     0.0000      Q 1NUC-A                          0.0000      Q 1HYDRO
+   13     0.0000      Q 1URBGEN                         0.0000      Q 1MINE
+   15     0.0000      Q 1CATDOG                         0.0000     ET 1NUC-A
+   17     0.0000     ET 1HYDRO                          0.0000     ET 1URBGEN
+   19     0.0000     ET 1MINE                           0.0000     ET 1CATDOG
+   21     0.0000     EFD1NUC-A                          0.0000     EFD1HYDRO
+   23     0.0000     EFD1URBGEN                         0.0000     EFD1MINE
+   25     0.0000     EFD1CATDOG                         0.0000     SPD1NUC-A
+   27     0.0000     SPD1HYDRO                          0.0000     SPD1URBGEN
+   29     0.0000     SPD1MINE                           0.0000     SPD1CATDOG
+   31     0.0000     PM 1NUC-A                          0.0000     PM 1HYDRO
+   33     0.0000     PM 1URBGEN                         0.0000       V-HYDRO
+   35     0.0000       V-SUB230                         0.0000     M  201-  204
+   37     0.0000     M  205-  154                       0.0000     R  201-  204
+   39     0.0000     X  201-  204                       0.0000     R  205-  154
+   41     0.0000     X  205-  154
+
+ 9.9999   0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+    7     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   13     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   19     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   25     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   31     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   37     0.0000       0.0000       0.0000       0.0000       0.0000
+
+
+
+
+The Saved Case in file C:\Users\jonathans\PycharmProjects\PSSEDYN\SampleSystem\IN\3bus.sav was saved on MON, FEB 13 2017  17:49
+
+Channel 1 : bus 101 not found
+
+Channel 2 : bus 211 not found
+
+Channel 3 : bus 206 not found
+
+Channel 4 : bus 3011 not found
+
+Channel 5 : bus 3018 not found
+
+Channel 6 : bus 101 not found
+
+Channel 7 : bus 211 not found
+
+Channel 8 : bus 206 not found
+
+Channel 9 : bus 3011 not found
+
+Channel 10 : bus 3018 not found
+
+Channel 11 : bus 101 not found
+
+Channel 12 : bus 211 not found
+
+Channel 13 : bus 206 not found
+
+Channel 14 : bus 3011 not found
+
+Channel 15 : bus 3018 not found
+
+Channel 16 : bus 101 not found
+
+Channel 17 : bus 211 not found
+
+Channel 18 : bus 206 not found
+
+Channel 19 : bus 3011 not found
+
+Channel 20 : bus 3018 not found
+
+Channel 21 : bus 101 not found
+
+Channel 22 : bus 211 not found
+
+Channel 23 : bus 206 not found
+
+Channel 24 : bus 3011 not found
+
+Channel 25 : bus 3018 not found
+
+Channel 26 : bus 101 not found
+
+Channel 27 : bus 211 not found
+
+Channel 28 : bus 206 not found
+
+Channel 29 : bus 3011 not found
+
+Channel 30 : bus 3018 not found
+
+Channel 31 : bus 101 not found
+
+Channel 32 : bus 211 not found
+
+Channel 33 : bus 206 not found
+
+Channel 1 : bus 101 not found
+
+Channel 2 : bus 211 not found
+
+Channel 3 : bus 206 not found
+
+Channel 4 : bus 3011 not found
+
+Channel 5 : bus 3018 not found
+
+Channel 6 : bus 101 not found
+
+Channel 7 : bus 211 not found
+
+Channel 8 : bus 206 not found
+
+Channel 9 : bus 3011 not found
+
+Channel 10 : bus 3018 not found
+
+Channel 11 : bus 101 not found
+
+Channel 12 : bus 211 not found
+
+Channel 13 : bus 206 not found
+
+Channel 14 : bus 3011 not found
+
+Channel 15 : bus 3018 not found
+
+Channel 16 : bus 101 not found
+
+Channel 17 : bus 211 not found
+
+Channel 18 : bus 206 not found
+
+Channel 19 : bus 3011 not found
+
+Channel 20 : bus 3018 not found
+
+Channel 21 : bus 101 not found
+
+Channel 22 : bus 211 not found
+
+Channel 23 : bus 206 not found
+
+Channel 24 : bus 3011 not found
+
+Channel 25 : bus 3018 not found
+
+Channel 26 : bus 101 not found
+
+Channel 27 : bus 211 not found
+
+Channel 28 : bus 206 not found
+
+Channel 29 : bus 3011 not found
+
+Channel 30 : bus 3018 not found
+
+Channel 31 : bus 101 not found
+
+Channel 32 : bus 211 not found
+
+Channel 33 : bus 206 not found
+
+The Snapshot at TIME = -0.01667 in file C:\Users\jonathans\PycharmProjects\PSSEDYN\SampleSystem\IN\3bus_dyn.snp was saved on MON, FEB 13 2017  17:36
+
+NUMBER OF ELEMENTS RESTORED:
+  CONS STATES   VARS  ICONS CHANNELS
+    56     20      2      0     41
+Ordering network...
+Diagonals = 6   Off-diagonals = 6   Maximum size = 12
+
+6 diagonal and 6 off-diagonal elements
+
+    PTI INTERACTIVE POWER SYSTEM SIMULATOR--PSS(R)E     MON, FEB 13 2017  17:50
+
+
+
+INITIAL CONDITION LOAD FLOW USED 1 ITERATIONS
+
+----------------------------- MACHINE INITIAL CONDITIONS -----------------------------
+  BUS#-SCT X-- NAME --X BASKV ID  ETERM   EFD    POWER    VARS   P.F.  ANGLE   ID     IQ
+     2     BUS 2       18.000 1  1.0250 1.0045  -19.92  -26.53-0.6003  -4.05-0.0867-0.0827
+     3     BUS 3       13.800 1  1.0345 1.0114   30.00  -20.00 0.8321  21.24-0.0861 0.2652
+
+INITIAL CONDITIONS CHECK O.K.
+
+Channel output file is "C:\Users\jonathans\PycharmProjects\PSSEDYN\out_dyntools_demo_bus3018_gentrip.out"
+
+Channel output file is "C:\Users\jonathans\PycharmProjects\PSSEDYN\out_dyntools_demo_bus3018_gentrip.out"
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+-0.0167   0.0000     ANG1NUC-A                          0.0000     ANG1HYDRO
+    3     0.0000     ANG1URBGEN                         0.0000     ANG1MINE
+    5     0.0000     ANG1CATDOG                         0.0000      P 1NUC-A
+    7     0.0000      P 1HYDRO                          0.0000      P 1URBGEN
+    9     0.0000      P 1MINE                           0.0000      P 1CATDOG
+   11     0.0000      Q 1NUC-A                          0.0000      Q 1HYDRO
+   13     0.0000      Q 1URBGEN                         0.0000      Q 1MINE
+   15     0.0000      Q 1CATDOG                         0.0000     ET 1NUC-A
+   17     0.0000     ET 1HYDRO                          0.0000     ET 1URBGEN
+   19     0.0000     ET 1MINE                           0.0000     ET 1CATDOG
+   21     0.0000     EFD1NUC-A                          0.0000     EFD1HYDRO
+   23     0.0000     EFD1URBGEN                         0.0000     EFD1MINE
+   25     0.0000     EFD1CATDOG                         0.0000     SPD1NUC-A
+   27     0.0000     SPD1HYDRO                          0.0000     SPD1URBGEN
+   29     0.0000     SPD1MINE                           0.0000     SPD1CATDOG
+   31     0.0000     PM 1NUC-A                          0.0000     PM 1HYDRO
+   33     0.0000     PM 1URBGEN                         0.0000       V-HYDRO
+   35     0.0000       V-SUB230                         0.0000     M  201-  204
+   37     0.0000     M  205-  154                       0.0000     R  201-  204
+   39     0.0000     X  201-  204                       0.0000     R  205-  154
+   41     0.0000     X  205-  154
+
+ 1.0000   0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+    7     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   13     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   19     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   25     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   31     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   37     0.0000       0.0000       0.0000       0.0000       0.0000
+
+*** Status of machine "1" at bus 2 [BUS 2       18.000] is set to out-of-service ***
+
+Channel output file is "C:\Users\jonathans\PycharmProjects\PSSEDYN\out_dyntools_demo_bus3018_gentrip.out"
+
+6 diagonal and 6 off-diagonal elements
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+ 1.0000   0.0000     ANG1NUC-A                          0.0000     ANG1HYDRO
+    3     0.0000     ANG1URBGEN                         0.0000     ANG1MINE
+    5     0.0000     ANG1CATDOG                         0.0000      P 1NUC-A
+    7     0.0000      P 1HYDRO                          0.0000      P 1URBGEN
+    9     0.0000      P 1MINE                           0.0000      P 1CATDOG
+   11     0.0000      Q 1NUC-A                          0.0000      Q 1HYDRO
+   13     0.0000      Q 1URBGEN                         0.0000      Q 1MINE
+   15     0.0000      Q 1CATDOG                         0.0000     ET 1NUC-A
+   17     0.0000     ET 1HYDRO                          0.0000     ET 1URBGEN
+   19     0.0000     ET 1MINE                           0.0000     ET 1CATDOG
+   21     0.0000     EFD1NUC-A                          0.0000     EFD1HYDRO
+   23     0.0000     EFD1URBGEN                         0.0000     EFD1MINE
+   25     0.0000     EFD1CATDOG                         0.0000     SPD1NUC-A
+   27     0.0000     SPD1HYDRO                          0.0000     SPD1URBGEN
+   29     0.0000     SPD1MINE                           0.0000     SPD1CATDOG
+   31     0.0000     PM 1NUC-A                          0.0000     PM 1HYDRO
+   33     0.0000     PM 1URBGEN                         0.0000       V-HYDRO
+   35     0.0000       V-SUB230                         0.0000     M  201-  204
+   37     0.0000     M  205-  154                       0.0000     R  201-  204
+   39     0.0000     X  201-  204                       0.0000     R  205-  154
+   41     0.0000     X  205-  154
+
+ 5.0000   0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+    7     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   13     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   19     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   25     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   31     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   37     0.0000       0.0000       0.0000       0.0000       0.0000
+
+
+
+
+The Saved Case in file C:\Users\jonathans\PycharmProjects\PSSEDYN\SampleSystem\IN\3bus.sav was saved on MON, FEB 13 2017  17:49
+
+Channel 1 : bus 101 not found
+
+Channel 2 : bus 211 not found
+
+Channel 3 : bus 206 not found
+
+Channel 4 : bus 3011 not found
+
+Channel 5 : bus 3018 not found
+
+Channel 6 : bus 101 not found
+
+Channel 7 : bus 211 not found
+
+Channel 8 : bus 206 not found
+
+Channel 9 : bus 3011 not found
+
+Channel 10 : bus 3018 not found
+
+Channel 11 : bus 101 not found
+
+Channel 12 : bus 211 not found
+
+Channel 13 : bus 206 not found
+
+Channel 14 : bus 3011 not found
+
+Channel 15 : bus 3018 not found
+
+Channel 16 : bus 101 not found
+
+Channel 17 : bus 211 not found
+
+Channel 18 : bus 206 not found
+
+Channel 19 : bus 3011 not found
+
+Channel 20 : bus 3018 not found
+
+Channel 21 : bus 101 not found
+
+Channel 22 : bus 211 not found
+
+Channel 23 : bus 206 not found
+
+Channel 24 : bus 3011 not found
+
+Channel 25 : bus 3018 not found
+
+Channel 26 : bus 101 not found
+
+Channel 27 : bus 211 not found
+
+Channel 28 : bus 206 not found
+
+Channel 29 : bus 3011 not found
+
+Channel 30 : bus 3018 not found
+
+Channel 31 : bus 101 not found
+
+Channel 32 : bus 211 not found
+
+Channel 33 : bus 206 not found
+
+Channel 1 : bus 101 not found
+
+Channel 2 : bus 211 not found
+
+Channel 3 : bus 206 not found
+
+Channel 4 : bus 3011 not found
+
+Channel 5 : bus 3018 not found
+
+Channel 6 : bus 101 not found
+
+Channel 7 : bus 211 not found
+
+Channel 8 : bus 206 not found
+
+Channel 9 : bus 3011 not found
+
+Channel 10 : bus 3018 not found
+
+Channel 11 : bus 101 not found
+
+Channel 12 : bus 211 not found
+
+Channel 13 : bus 206 not found
+
+Channel 14 : bus 3011 not found
+
+Channel 15 : bus 3018 not found
+
+Channel 16 : bus 101 not found
+
+Channel 17 : bus 211 not found
+
+Channel 18 : bus 206 not found
+
+Channel 19 : bus 3011 not found
+
+Channel 20 : bus 3018 not found
+
+Channel 21 : bus 101 not found
+
+Channel 22 : bus 211 not found
+
+Channel 23 : bus 206 not found
+
+Channel 24 : bus 3011 not found
+
+Channel 25 : bus 3018 not found
+
+Channel 26 : bus 101 not found
+
+Channel 27 : bus 211 not found
+
+Channel 28 : bus 206 not found
+
+Channel 29 : bus 3011 not found
+
+Channel 30 : bus 3018 not found
+
+Channel 31 : bus 101 not found
+
+Channel 32 : bus 211 not found
+
+Channel 33 : bus 206 not found
+
+The Snapshot at TIME = -0.01667 in file C:\Users\jonathans\PycharmProjects\PSSEDYN\SampleSystem\IN\3bus_dyn.snp was saved on MON, FEB 13 2017  17:36
+
+NUMBER OF ELEMENTS RESTORED:
+  CONS STATES   VARS  ICONS CHANNELS
+    56     20      2      0     41
+Ordering network...
+Diagonals = 6   Off-diagonals = 6   Maximum size = 12
+
+6 diagonal and 6 off-diagonal elements
+
+    PTI INTERACTIVE POWER SYSTEM SIMULATOR--PSS(R)E     MON, FEB 13 2017  17:50
+
+
+
+INITIAL CONDITION LOAD FLOW USED 1 ITERATIONS
+
+----------------------------- MACHINE INITIAL CONDITIONS -----------------------------
+  BUS#-SCT X-- NAME --X BASKV ID  ETERM   EFD    POWER    VARS   P.F.  ANGLE   ID     IQ
+     2     BUS 2       18.000 1  1.0250 1.0045  -19.92  -26.53-0.6003  -4.05-0.0867-0.0827
+     3     BUS 3       13.800 1  1.0345 1.0114   30.00  -20.00 0.8321  21.24-0.0861 0.2652
+
+INITIAL CONDITIONS CHECK O.K.
+
+Channel output file is "C:\Users\jonathans\PycharmProjects\PSSEDYN\out_dyntools_demo_brn3005_3007_trip.out"
+
+Channel output file is "C:\Users\jonathans\PycharmProjects\PSSEDYN\out_dyntools_demo_brn3005_3007_trip.out"
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+-0.0167   0.0000     ANG1NUC-A                          0.0000     ANG1HYDRO
+    3     0.0000     ANG1URBGEN                         0.0000     ANG1MINE
+    5     0.0000     ANG1CATDOG                         0.0000      P 1NUC-A
+    7     0.0000      P 1HYDRO                          0.0000      P 1URBGEN
+    9     0.0000      P 1MINE                           0.0000      P 1CATDOG
+   11     0.0000      Q 1NUC-A                          0.0000      Q 1HYDRO
+   13     0.0000      Q 1URBGEN                         0.0000      Q 1MINE
+   15     0.0000      Q 1CATDOG                         0.0000     ET 1NUC-A
+   17     0.0000     ET 1HYDRO                          0.0000     ET 1URBGEN
+   19     0.0000     ET 1MINE                           0.0000     ET 1CATDOG
+   21     0.0000     EFD1NUC-A                          0.0000     EFD1HYDRO
+   23     0.0000     EFD1URBGEN                         0.0000     EFD1MINE
+   25     0.0000     EFD1CATDOG                         0.0000     SPD1NUC-A
+   27     0.0000     SPD1HYDRO                          0.0000     SPD1URBGEN
+   29     0.0000     SPD1MINE                           0.0000     SPD1CATDOG
+   31     0.0000     PM 1NUC-A                          0.0000     PM 1HYDRO
+   33     0.0000     PM 1URBGEN                         0.0000       V-HYDRO
+   35     0.0000       V-SUB230                         0.0000     M  201-  204
+   37     0.0000     M  205-  154                       0.0000     R  201-  204
+   39     0.0000     X  201-  204                       0.0000     R  205-  154
+   41     0.0000     X  205-  154
+
+ 1.0000   0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+    7     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   13     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   19     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   25     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   31     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   37     0.0000       0.0000       0.0000       0.0000       0.0000
+
+*** Status of circuit "1" from 7 [BUS 7       230.00] to 8 [BUS 8       230.00] is set to out-of-service ***
+
+Channel output file is "C:\Users\jonathans\PycharmProjects\PSSEDYN\out_dyntools_demo_brn3005_3007_trip.out"
+
+6 diagonal and 5 off-diagonal elements
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+ 1.0000   0.0000     ANG1NUC-A                          0.0000     ANG1HYDRO
+    3     0.0000     ANG1URBGEN                         0.0000     ANG1MINE
+    5     0.0000     ANG1CATDOG                         0.0000      P 1NUC-A
+    7     0.0000      P 1HYDRO                          0.0000      P 1URBGEN
+    9     0.0000      P 1MINE                           0.0000      P 1CATDOG
+   11     0.0000      Q 1NUC-A                          0.0000      Q 1HYDRO
+   13     0.0000      Q 1URBGEN                         0.0000      Q 1MINE
+   15     0.0000      Q 1CATDOG                         0.0000     ET 1NUC-A
+   17     0.0000     ET 1HYDRO                          0.0000     ET 1URBGEN
+   19     0.0000     ET 1MINE                           0.0000     ET 1CATDOG
+   21     0.0000     EFD1NUC-A                          0.0000     EFD1HYDRO
+   23     0.0000     EFD1URBGEN                         0.0000     EFD1MINE
+   25     0.0000     EFD1CATDOG                         0.0000     SPD1NUC-A
+   27     0.0000     SPD1HYDRO                          0.0000     SPD1URBGEN
+   29     0.0000     SPD1MINE                           0.0000     SPD1CATDOG
+   31     0.0000     PM 1NUC-A                          0.0000     PM 1HYDRO
+   33     0.0000     PM 1URBGEN                         0.0000       V-HYDRO
+   35     0.0000       V-SUB230                         0.0000     M  201-  204
+   37     0.0000     M  205-  154                       0.0000     R  201-  204
+   39     0.0000     X  201-  204                       0.0000     R  205-  154
+   41     0.0000     X  205-  154
+
+ 5.0000   0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+    7     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   13     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   19     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   25     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   31     0.0000       0.0000       0.0000       0.0000       0.0000       0.0000
+   37     0.0000       0.0000       0.0000       0.0000       0.0000
+
+** LINES PER PAGE for REPORT WINDOW set to 10000000
