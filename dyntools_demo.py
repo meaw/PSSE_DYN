@@ -87,9 +87,13 @@ def get_demotest_file_names(outpath):
 # Run Dynamic simulation on SAVNW to generate .out files
 
 def run_savnw_simulation(datapath, outfile1, outfile2, outfile3, prgfile):
-    _start=50
-    _end=100;
-    _runto=200;
+    _F1_start=100
+    _F1_end=100.05;
+
+    _F2_start = 300
+    _F2_end = 400;
+
+    _runto=300;
     import psspy
     psspy.psseinit()
 
@@ -120,26 +124,26 @@ def run_savnw_simulation(datapath, outfile1, outfile2, outfile3, prgfile):
         return
 
     psspy.strt(0,outfile1)  #strt(option, outfile)   #Use this API to initialize a PSSE dynamic simulation for state-space simulations (i.e., in preparation for activity RUN) and to specify the Channel Output File into which the output channel values are to be recorded during the dynamic simulation (activity STRT).
-    psspy.run(0, _start,5000,1,0) #Use this API to calculate PSSE state-space dynamic simulations (activity RUN).
+    psspy.run(0, _F1_start,5000,1,0) #Use this API to calculate PSSE state-space dynamic simulations (activity RUN).
     #psspy.dist_bus_fault(8,1, 230.0,[0.0,-0.2E+10]) #Use this API routine to apply a fault at a bus during dynamic simulations. (Note: use DIST_BUS_FAULT_2 if phase voltages are to be calculated during the simulation.)
 
 
     businfo = subsystem_info('bus', ['NUMBER', 'NAME', 'PU'], sid=-1)
     print businfo
-
-    psspy.load_chng_5(12, r"""1""", [0, _i, _i, _i, _i, _i, _i], [_f, _f, _f, _f, _f, _f, _f, _f])
+    psspy.dist_branch_trip(8, 7, '1')
+    ##psspy.load_chng_5(11, r"""1""", [0, _i, _i, _i, _i, _i, _i], [_f, _f, _f, _f, _f, _f, _f, _f])
     businfo = subsystem_info('bus', ['NUMBER', 'NAME', 'PU'], sid=-1)
     print businfo
 
-    psspy.run(0, _end+1.5*1/60,5000,1,0)
+    psspy.run(0, _F1_end+1.5*1/60,5000,1,0)
     businfo = subsystem_info('bus', ['NUMBER', 'NAME', 'PU'], sid=-1)
     print businfo
 
 
 
-    #psspy.dist_branch_close(8,11,'1')
-    psspy.load_chng_5(12, r"""1""", [1, _i, _i, _i, _i, _i, _i], [_f, _f, _f, _f, _f, _f, _f, _f])
-    psspy.run(0, _end+2.0, 5000, 1, 0)
+    psspy.dist_branch_close(8,7,'1')
+   ## psspy.load_chng_5(11, r"""1""", [1, _i, _i, _i, _i, _i, _i], [_f, _f, _f, _f, _f, _f, _f, _f])
+    psspy.run(0, _F1_end+2.0, 5000, 1, 0)
     businfo = subsystem_info('bus', ['NUMBER', 'NAME', 'PU'], sid=-1)
     print businfo
 
@@ -182,17 +186,27 @@ def test0_run_simulation(datapath=None, outpath=None):
 Matrix_VOLT =[];
 Matrix_FREQ =[];
 Matrix_ANGL =[];
+Matrix_POWR =[];
+Matrix_VARS =[];
 ANGL_hdr=[];
 FREQ_hdr=[];
 VOLT_hdr=[];
-
+POWR_hdr=[];
+VARS_hdr=[];
 def test1_data_extraction(outpath=None, show=True):
     import numpy as np
     import dyntools
     global Matrix_VOLT
     global Matrix_FREQ
     global Matrix_ANGL
+    global Matrix_POWR
+    global Matrix_VARS
 
+    global ANGL_hdr
+    global FREQ_hdr
+    global VOLT_hdr
+    global POWR_hdr
+    global VARS_hdr
     print outpath
     outfile1, outfile2, outfile3, prgfile = get_demotest_file_names(outpath)
 
@@ -209,7 +223,14 @@ def test1_data_extraction(outpath=None, show=True):
     ANGL_ctr=0; ANGL_pos=[];ANGL_hdr=[];
     FREQ_ctr = 0;FREQ_pos=[];FREQ_hdr=[];
     VOLT_ctr = 0;VOLT_pos=[];VOLT_hdr=[];
+    POWR_ctr = 0;POWR_pos=[];POWR_hdr=[];
+    VARS_ctr = 0;VARS_pos=[];VARS_hdr=[];
     nchannels=len(ch_data)
+    ANGL_hdr.append("Time")
+    FREQ_hdr.append("Time")
+    VOLT_hdr.append("Time")
+    POWR_hdr.append("Time")
+    VARS_hdr.append("Time")
     #iterate the channels to find angle channels
     for x in range(1, nchannels):
         tclass=ch_id.get(x);
@@ -217,6 +238,7 @@ def test1_data_extraction(outpath=None, show=True):
             ANGL_ctr+=1;
             ANGL_pos.append(x)
             ANGL_hdr.append(tclass)
+
 
         if (tclass.find('FREQ')>=0):
             FREQ_ctr+=1;
@@ -228,10 +250,23 @@ def test1_data_extraction(outpath=None, show=True):
             VOLT_pos.append(x)
             VOLT_hdr.append(tclass)
 
+        if (tclass.find('POWR') >= 0):
+            POWR_ctr += 1;
+            POWR_pos.append(x)
+            POWR_hdr.append(tclass)
+
+        if (tclass.find('VARS') >= 0):
+            VARS_ctr += 1;
+            VARS_pos.append(x)
+            VARS_hdr.append(tclass)
+
     xp1 = len(ch_data.get('time'))
     Matrix_ANGL = [[0 for x in range(ANGL_ctr + 1)] for y in range(xp1)]
     Matrix_FREQ = [[0 for x in range(FREQ_ctr + 1)] for y in range(xp1)]
     Matrix_VOLT = [[0 for x in range(VOLT_ctr + 1)] for y in range(xp1)]
+    Matrix_POWR = [[0 for x in range(POWR_ctr + 1)] for y in range(xp1)]
+    Matrix_VARS = [[0 for x in range(VARS_ctr + 1)] for y in range(xp1)]
+
 
 
     for xi in range(0, xp1):
@@ -249,9 +284,22 @@ def test1_data_extraction(outpath=None, show=True):
         for xj in range(0, VOLT_ctr):
             Matrix_VOLT[xi][1+xj] = ch_data.get(VOLT_pos[xj])[xi]
 
-    np.savetxt(outpath + "\\" + "ANG.csv", Matrix_ANGL,fmt="%12.6f",delimiter="; ",header="time;"+'; '.join(ANGL_hdr))
-    np.savetxt(outpath + "\\" + "FREQ.csv", Matrix_FREQ,fmt="%12.6f",delimiter="; ",header="time;"+'; '.join(FREQ_hdr))
-    np.savetxt(outpath+"\\"+"VOLT.csv",Matrix_VOLT,fmt="%12.6f",delimiter="; ",header="time;"+'; '.join(VOLT_hdr))
+    for xi in range(0, xp1):
+        Matrix_POWR[xi][0] = ch_data.get('time')[xi]
+        for xj in range(0, POWR_ctr):
+            Matrix_POWR[xi][1 + xj] = ch_data.get(POWR_pos[xj])[xi]
+
+    for xi in range(0, xp1):
+        Matrix_VARS[xi][0] = ch_data.get('time')[xi]
+        for xj in range(0, VARS_ctr):
+            Matrix_VARS[xi][1 + xj] = ch_data.get(VARS_pos[xj])[xi]
+
+    np.savetxt(outpath + "\\" + "ANG.csv", Matrix_ANGL,fmt="%12.6f",delimiter="; ",header='; '.join(ANGL_hdr))
+    np.savetxt(outpath + "\\" + "FREQ.csv", Matrix_FREQ,fmt="%12.6f",delimiter="; ",header='; '.join(FREQ_hdr))
+    np.savetxt(outpath+"\\"+"VOLT.csv",Matrix_VOLT,fmt="%12.6f",delimiter="; ",header='; '.join(VOLT_hdr))
+    np.savetxt(outpath + "\\" + "P.csv", Matrix_POWR, fmt="%12.6f", delimiter="; ", header='; '.join(POWR_hdr))
+    np.savetxt(outpath + "\\" + "Q.csv", Matrix_VARS, fmt="%12.6f", delimiter="; ", header='; '.join(VARS_hdr))
+
 
     #np.savetxt("test.txt",np.asarray( [ch_data.get('time')], [ch_data.get(1)],[ch_data.get(2)] ) );
 
@@ -282,86 +330,114 @@ def test1_data_extraction(outpath=None, show=True):
 #    Channels specified with normal dictionary
 
 # See how "set_plot_legend_options" method can be used to place and format legends
+def format_label(input_label):
+    ki=input_label.find("[")+1
+    kf = input_label.find("]")
+    text1=input_label[ki:kf]
+    return text1
 
-def test2_subplots_one_trace(outpath=None, show=True):
-
-    import dyntools
+def plot_qt(plottype,title="",filename="out.png",list_buses=[], t_start=-1,t_len=10000):
     import numpy as np
-    global Matrix_VOLT
-    global Matrix_FREQ
-    global Matrix_ANGL
     import matplotlib.pyplot as plt
+    #plottype=upper(plottype)
+    if (plottype=="V"):
+        a_TEMP = np.array(Matrix_VOLT)
+        h_TEMP=VOLT_hdr;
+        ylabel="Voltage (PU)"
+
+    if (plottype=="F"):
+        a_TEMP = np.array(Matrix_FREQ)
+        h_TEMP = FREQ_hdr;
+        ylabel = "Frequency (Hz)"
+
+    if (plottype=="A"):
+        a_TEMP = np.array(Matrix_ANGL)
+        h_TEMP = ANGL_hdr;
+        ylabel = "Angle (DEG)"
+
+    if (plottype=="P"):
+        a_TEMP = np.array(Matrix_POWR)
+        h_TEMP = POWR_hdr;
+        ylabel = "Power (MW)"
+
+    if (plottype=="Q"):
+        a_TEMP = np.array(Matrix_VARS)
+        h_TEMP = VARS_hdr;
+        ylabel = "R Power (VARS)"
+
     fig, ax = plt.subplots(nrows=1, ncols=1)  # create figure & 1 axis
 
-    a_VOLT = np.array(Matrix_VOLT)
-    a_ANGL = np.array(Matrix_ANGL)
-    a_FREQ = np.array(Matrix_FREQ)
-    for xi in range(1, len(a_VOLT[1,:])):
-        ax.plot(a_VOLT[:,0], a_VOLT[:,xi],label=VOLT_hdr[xi])
+    timect = a_TEMP[1,0] - a_TEMP[0,0]
 
-    plt.legend()
-    plt.ylabel('Voltage (PU)')
+    startpos = t_start / timect;
+
+    if startpos<0:
+        startpos=0;
+
+    endpos = t_len / timect+startpos;
+    if endpos>len(a_TEMP[:, 1]):
+        endpos=len(a_TEMP[:, 1]);
+
+    if (len(list_buses)==0):
+        for xi in range(1, len(a_TEMP[1, :])):
+            ax.plot(a_TEMP[startpos:endpos, 0], a_TEMP[startpos:endpos, xi],  linewidth=.75,label=str(xi)+": "+format_label(h_TEMP[xi]))
+    else:
+        for xi in range(0, len(list_buses)):
+            xj=list_buses[xi];
+            ax.plot(a_TEMP[startpos:endpos, 0], a_TEMP[startpos:endpos, xj],  linewidth=.75,label=format_label(h_TEMP[xj]))
+
+    plt.grid( linestyle='--', linewidth=.5)
+    plt.legend(prop={'size':6})
+    plt.title(title)
+    plt.ylabel(ylabel)
     plt.xlabel('Time (s)')
-
-    fig.savefig(outpath+'/to.png')  # save the figure to file
+    fig.savefig(outpath + '/'+filename)  # save the figure to file
     plt.close(fig)  # close the figure
 
 
+
+def test2_subplots_one_trace(outpath=None, show=True):
+    '''
+    plot_qt("V","","V_all.png")
+    plot_qt("V","Bus voltages","V_filtered.png",[3,4,5,6,7,8,9,10])
+
+    plot_qt("F", "","F_all.png")
+    plot_qt("F","Bus frequencies", "F_filtered.png", [1,2])
+
+    plot_qt("A","", "A_all.png")
+    plot_qt("A","Bus angles relative to BUS 2", "A_filtered.png", [1,2])
+
+    plot_qt("P","", "P_all.png")
+    plot_qt("P","P at generation buses", "P_Gen.png", [3,4])
+    plot_qt("P","P at load buses", "P_Load.png", [10, 16])
+    plot_qt("P", "P flows between buses", "P_Buses.png", [ 6, 7, 13])
+
+    plot_qt("Q","","Q_all.png")
+    plot_qt("Q","Q at generation buses", "Q_Gen.png", [3, 4])
+    plot_qt("Q","Q at load buses","Q_Load.png", [ 10, 16])
+    plot_qt("Q","Q flows between buses", "Q_Buses.png", [ 6, 7, 13])
+'''
+
+    plot_qt("V", "", "V_all.png")
+    plot_qt("V", "Bus voltages", "V_filtered.png", [3, 4, 5, 6, 7, 8, 9, 10])
+
+    plot_qt("F", "", "F_all.png")
+    plot_qt("F", "Bus frequencies", "F_filtered.png", [1, 2])
+
+    plot_qt("A", "", "A_all.png")
+    plot_qt("A", "Bus angles relative to BUS 2", "A_filtered.png", [1, 2])
+
+    plot_qt("P", "", "P_all.png")
+    plot_qt("P", "P at generation buses", "P_Gen.png", [3, 4])
+    plot_qt("P", "P at load buses", "P_Load.png", [10, 16])
+    plot_qt("P", "P flows between buses", "P_Buses.png", [6, 7, 13])
+
+    plot_qt("Q", "", "Q_all.png")
+    plot_qt("Q", "Q at generation buses", "Q_Gen.png", [3, 4])
+    plot_qt("Q", "Q at load buses", "Q_Load.png", [10, 16])
+    plot_qt("Q", "Q flows between buses", "Q_Buses.png", [6, 7, 13],100,10)
+
     print 'Write Data//'
-    outfile1, outfile2, outfile3, prgfile = get_demotest_file_names(outpath)
-
-    chnfobj = dyntools.CHNF(outfile1, outfile2)
-
-    chnfobj.set_plot_page_options(size='letter', orientation='portrait')
-    chnfobj.set_plot_markers('square', 'triangle_up', 'thin_diamond', 'plus', 'x',
-                             'circle', 'star', 'hexagon1')
-    chnfobj.set_plot_line_styles('solid', 'dashed', 'dashdot', 'dotted')
-    chnfobj.set_plot_line_colors('blue', 'red', 'black', 'green', 'cyan', 'magenta', 'pink', 'purple')
-
-    optnfmt  = {'rows':4,'columns':2,'dpi':300,'showttl':True, 'showoutfnam':True, 'showlogo':False,
-                'legendtype':1, 'addmarker':True}
-
-    optnchn1 = {1:{'chns':1,    'title':'ANGL 2'},
-                2:{'chns':2,    'title':'ANGL 3'},
-                3:{'chns':3,    'title':'POWR 2'},
-                4:{'chns':4,    'title':'POWR 2'},
-                5:{'chns':15,   'title':'FREQ 2'},
-                6:{'chns':16,   'title':'FREQ 3'},
-                7: {'chns': Matrix_VOLT[:][1], 'title': 'VOLT 2'},
-                8: {'chns': 22, 'title': 'VOLT 3'},
-                }
-    pn,x     = os.path.splitext(outfile1)
-    pltfile1 = pn+'.png'
-
-    optnchn2 = {1:{'chns':{outfile2:1}, 'title':'Channel 1 from bus3018_gentrip'},
-                2:{'chns':{outfile2:6}, 'title':'Channel 6 from bus3018_gentrip'},
-                3:{'chns':{outfile2:11}},
-                4:{'chns':{outfile2:16}},
-                5:{'chns':{outfile2:26}},
-                6:{'chns':{outfile2:40}},
-                }
-    pn,x     = os.path.splitext(outfile2)
-    pltfile2 = pn+'.png'
-
-    figfiles1 = chnfobj.xyplots(optnchn1,optnfmt,pltfile1)
-
-    chnfobj.set_plot_legend_options(loc='lower center', borderpad=0.2, labelspacing=0.5,
-                                    handlelength=1.5, handletextpad=0.5, fontsize=8, frame=False)
-
-    optnfmt  = {'rows':3,'columns':1,'dpi':300,'showttl':False, 'showoutfnam':True, 'showlogo':False,
-                'legendtype':2, 'addmarker':False}
-
-    figfiles2 = chnfobj.xyplots(optnchn2,optnfmt,pltfile2)
-
-    if figfiles1 or figfiles2:
-        print 'Plot fils saved:'
-        if figfiles1: print '   ', figfiles1[0]
-        if figfiles2: print '   ', figfiles2[0]
-
-    if show:
-        chnfobj.plots_show()
-    else:
-        chnfobj.plots_close()
 
 # =============================================================================================
 # 3. Multiple subplots in a figure and more than one trace in each subplot
@@ -521,8 +597,8 @@ if __name__ == '__main__':
     #(a) Run one test a time
     # Need to run "test0_run_simulation(..)" before running other tests.
     # After running "test0_run_simulation(..)", run other tests one at a time.
-    datapath = 'C:\Users\jonathans\PycharmProjects\PSSEDYN\SampleSystem\IN'
-    outpath  = 'C:\Users\jonathans\PycharmProjects\PSSEDYN\SampleSystem\OUT'
+    datapath = 'C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\IN'
+    outpath  = 'C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\OUT'
     show     = True     # True  --> create, save and show Excel spreadsheets and Plots when done
                         # False --> create, save but do not show Excel spreadsheets and Plots when done
 

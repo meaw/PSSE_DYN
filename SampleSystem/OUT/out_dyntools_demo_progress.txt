@@ -2,17 +2,17 @@
 
 
 
-The Saved Case in file C:\Users\jonathans\PycharmProjects\PSSEDYN\SampleSystem\IN\IEEE 9 Bus_modifiedj4ab.sav was saved on TUE, FEB 14 2017  13:08
+The Saved Case in file C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\IN\IEEE 9 Bus_modifiedj4ab.sav was saved on TUE, FEB 14 2017  16:10
 
 The following option settings are changed to the settings contained in the Saved Case File:
 
 ** NON-TRANSFORMER BRANCH PERCENT LOADING UNITS option setting set to MVA
 
-The Snapshot at TIME = 20.00811 in file C:\Users\jonathans\PycharmProjects\PSSEDYN\SampleSystem\IN\IEEE 9 Bus_modifiedj4ab.snp was saved on TUE, FEB 14 2017  13:30
+The Snapshot at TIME = 200.00656 in file C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\IN\IEEE 9 Bus_modifiedj4ab.snp was saved on TUE, FEB 14 2017  16:21
 
 NUMBER OF ELEMENTS RESTORED:
   CONS STATES   VARS  ICONS CHANNELS
-   112     62     54     70     18
+   112     62     94    126     60
 
 6 diagonal and 6 off-diagonal elements
 
@@ -22,7 +22,10 @@ Model GENROU Bus 2 [BUS 2       18.000] Machine "1 " :
 Model GENROU Bus 3 [BUS 3       13.800] Machine "1 " :
     X''D = .210000, imaginary part of complex machine impedance (ZSORCE) = .134000, differ by > .500000E-05
 
-    PTI INTERACTIVE POWER SYSTEM SIMULATOR--PSS(R)E     TUE, FEB 14 2017  14:12
+Model IEESGO Bus 2 [BUS 2       18.000] Machine "1 " :
+    initialized out of limit(s) PMECH(I)
+
+    PTI INTERACTIVE POWER SYSTEM SIMULATOR--PSS(R)E     THU, FEB 16 2017   0:35
 
 
 
@@ -35,46 +38,281 @@ INITIAL CONDITION LOAD FLOW USED 1 ITERATIONS
 
 INITIAL CONDITIONS CHECK O.K.
 
-Channel output file is "C:\Users\jonathans\PycharmProjects\PSSEDYN\SampleSystem\OUT\out_dyntools_demo_bus154_fault.out"
+Channel output file is "C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\OUT\out_dyntools_demo_bus154_fault.out"
 
-Channel output file is "C:\Users\jonathans\PycharmProjects\PSSEDYN\SampleSystem\OUT\out_dyntools_demo_bus154_fault.out"
+Channel output file is "C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\OUT\out_dyntools_demo_bus154_fault.out"
 
    TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
 -0.0167  -91.985     ANGL     2[BUS 2       18.000]1   -78.323     ANGL     3[BUS 3       13.800]1
-    3   -1.89741E-03 POWR     2[BUS 2       18.000]1   0.40567     POWR     3[BUS 3       13.800]1
+    3   -1.89742E-03 POWR     2[BUS 2       18.000]1   0.40567     POWR     3[BUS 3       13.800]1
     5   -0.57861     VARS     2[BUS 2       18.000]1   0.26814     VARS     3[BUS 3       13.800]1
     7    0.96994     ETRM     2[BUS 2       18.000]1    1.0748     ETRM     3[BUS 3       13.800]1
     9    0.59545     EFD      2[BUS 2       18.000]1    2.5675     EFD      3[BUS 3       13.800]1
-   11   -6.24640E-04 PMEC     2[BUS 2       18.000]1   0.32506     PMEC     3[BUS 3       13.800]1
+   11   -6.24666E-04 PMEC     2[BUS 2       18.000]1   0.32506     PMEC     3[BUS 3       13.800]1
    13     0.0000     SPD      2[BUS 2       18.000]1    0.0000     SPD      3[BUS 3       13.800]1
    15     0.0000     FREQ      2 [BUS 2       18.000]   0.0000     FREQ      3 [BUS 3       13.800]
    17    0.96994     VOLT      2 [BUS 2       18.000]   1.0748     VOLT      3 [BUS 3       13.800]
+   19    -91.985     ANGL     2[BUS 2       18.000]1   -78.323     ANGL     3[BUS 3       13.800]1
+   21    0.96994     VOLT      2 [BUS 2       18.000]   1.0748     VOLT      3 [BUS 3       13.800]
+   23     1.0072     VOLT      7 [BUS 7       230.00]   1.0284     VOLT      8 [BUS 8       230.00]
+   25     1.0604     VOLT      9 [BUS 9       230.00]   1.0593     VOLT     10 [10          34.500]
+   27     1.0284     VOLT     11 [11          138.00]   1.0593     VOLT     12 [12          34.500]
+   29   -0.18974     POWR      2 TO      7 CKT '1 '    -57.861     VARS      2 TO      7 CKT '1 '
+   31     40.567     POWR      3 TO      9 CKT '1 '     26.814     VARS      3 TO      9 CKT '1 '
+   33    0.18974     POWR      7 TO      2 CKT '1 '     60.085     VARS      7 TO      2 CKT '1 '
+   35     4.6794     POWR      7 TO      8 CKT '1 '    -45.243     VARS      7 TO      8 CKT '1 '
+   37    -4.8692     POWR      7 TO      9 CKT '1 '    -14.841     VARS      7 TO      9 CKT '1 '
+   39    -4.5586     POWR      8 TO      7 CKT '1 '     30.625     VARS      8 TO      7 CKT '1 '
+   41    -25.176     POWR      8 TO      9 CKT '1 '    -40.536     VARS      8 TO      9 CKT '1 '
+   43     29.735     POWR      8 TO     11 CKT '1 '     9.9115     VARS      8 TO     11 CKT '1 '
+   45    -40.567     POWR      9 TO      3 CKT '1 '    -25.615     VARS      9 TO      3 CKT '1 '
+   47     4.9809     POWR      9 TO      7 CKT '1 '     4.3436     VARS      9 TO      7 CKT '1 '
+   49     25.345     POWR      9 TO      8 CKT '1 '     19.166     VARS      9 TO      8 CKT '1 '
+   51     10.241     POWR      9 TO     10 CKT '1 '     2.1051     VARS      9 TO     10 CKT '1 '
+   53    -10.241     POWR     10 TO      9 CKT '1 '    -2.0482     VARS     10 TO      9 CKT '1 '
+   55     10.241     POWR     10 TO     12 CKT '1 '     2.0482     VARS     10 TO     12 CKT '1 '
+   57    -29.735     POWR     11 TO      8 CKT '1 '    -9.9115     VARS     11 TO      8 CKT '1 '
+   59    -10.241     POWR     12 TO     10 CKT '1 '    -2.0482     VARS     12 TO     10 CKT '1 '
 
-41.6517  -91.985      -78.323     -1.89733E-03  0.40567     -0.57861      0.26814
-    7    0.96994       1.0748      0.59545       2.5675     -6.24640E-04  0.32506
-   13   -5.92958E-09  1.69883E-08 -9.71388E-30 -1.69993E-29  0.96994       1.0748
+41.6517  -124.62      -111.01     -1.39853E-03  0.40507     -0.57855      0.26829
+    7    0.96967       1.0746      0.59515       2.5672      2.78370E-06  0.32506
+   13    5.05633E-04  5.05598E-04  5.05025E-04  5.05007E-04  0.96967       1.0746
+   19    -124.62      -111.01      0.96967       1.0746       1.0070       1.0281
+   25     1.0602       1.0590       1.0281       1.0590     -0.13983      -57.855
+   31     40.507       26.829      0.13983       60.080       4.7166      -45.239
+   37    -4.8565      -14.841      -4.5957       30.629      -25.132      -40.538
+   43     29.728       9.9087      -40.507      -25.631       4.9682       4.3484
+   49     25.301       19.178       10.238       2.1046      -10.238      -2.0476
+   55     10.238       2.0476      -29.728      -9.9087      -10.238      -2.0476
 
-83.3184  -91.985      -78.323     -1.89705E-03  0.40567     -0.57861      0.26814
-    7    0.96994       1.0748      0.59545       2.5675     -6.24640E-04  0.32506
-   13    4.16988E-09 -1.69620E-08 -5.33608E-09 -9.33815E-09  0.96994       1.0748
+83.3184   406.75       420.35     -1.29560E-03  0.40507     -0.57869      0.26818
+    7    0.96994       1.0748      0.59542       2.5675      9.93161E-08  0.32506
+   13    6.00640E-04  6.00615E-04  6.00604E-04  6.00599E-04  0.96994       1.0748
+   19     406.75       420.35      0.96994       1.0748       1.0072       1.0284
+   25     1.0604       1.0593       1.0284       1.0593     -0.12955      -57.869
+   31     40.507       26.818      0.12955       60.094       4.7257      -45.249
+   37    -4.8553      -14.844      -4.6048       30.631      -25.131      -40.542
+   43     29.735       9.9113      -40.507      -25.621       4.9669       4.3458
+   49     25.299       19.170       10.241       2.1050      -10.241      -2.0481
+   55     10.241       2.0481      -29.735      -9.9113      -10.241      -2.0481
 
-124.975  -91.985      -78.323     -1.89765E-03  0.40567     -0.57861      0.26814
-    7    0.96994       1.0748      0.59545       2.5675     -6.24640E-04  0.32506
-   13   -2.83816E-09  9.93403E-09 -2.31558E-34  2.25625E-11  0.96994       1.0748
+100.006   623.15       636.75     -1.29872E-03  0.40508     -0.57869      0.26819
+    7    0.96994       1.0748      0.59540       2.5675      2.61272E-08  0.32506
+   13    5.99897E-04  5.99977E-04  5.99862E-04  5.99917E-04  0.96994       1.0748
+   19     623.15       636.75      0.96994       1.0748       1.0072       1.0284
+   25     1.0604       1.0593       1.0284       1.0593     -0.12988      -57.869
+   31     40.508       26.818      0.12988       60.094       4.7255      -45.250
+   37    -4.8553      -14.844      -4.6046       30.632      -25.131      -40.543
+   43     29.735       9.9113      -40.508      -25.621       4.9670       4.3459
+   49     25.300       19.170       10.241       2.1050      -10.241      -2.0481
+   55     10.241       2.0481      -29.735      -9.9113      -10.241      -2.0481
 
-166.631  -91.985      -78.323     -1.89723E-03  0.40567     -0.57861      0.26814
-    7    0.96994       1.0748      0.59545       2.5675     -6.24640E-04  0.32506
-   13   -2.88141E-10 -3.43479E-09 -1.27201E-13 -2.22601E-13  0.96994       1.0748
+*** Status of circuit "1" from 8 [BUS 8       230.00] to 7 [BUS 7       230.00] is set to out-of-service ***
+
+Channel output file is "C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\OUT\out_dyntools_demo_bus154_fault.out"
+
+6 diagonal and 5 off-diagonal elements
 
    TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
-200.007  -91.985     ANGL     2[BUS 2       18.000]1   -78.323     ANGL     3[BUS 3       13.800]1
-    3   -1.89748E-03 POWR     2[BUS 2       18.000]1   0.40567     POWR     3[BUS 3       13.800]1
-    5   -0.57861     VARS     2[BUS 2       18.000]1   0.26814     VARS     3[BUS 3       13.800]1
-    7    0.96994     ETRM     2[BUS 2       18.000]1    1.0748     ETRM     3[BUS 3       13.800]1
-    9    0.59545     EFD      2[BUS 2       18.000]1    2.5675     EFD      3[BUS 3       13.800]1
-   11   -6.24640E-04 PMEC     2[BUS 2       18.000]1   0.32506     PMEC     3[BUS 3       13.800]1
-   13    4.60049E-09 SPD      2[BUS 2       18.000]1  -1.73056E-08 SPD      3[BUS 3       13.800]1
-   15    3.06314E-27 FREQ      2 [BUS 2       18.000]  3.04591E-22 FREQ      3 [BUS 3       13.800]
-   17    0.96994     VOLT      2 [BUS 2       18.000]   1.0748     VOLT      3 [BUS 3       13.800]
+100.006   623.15     ANGL     2[BUS 2       18.000]1    636.75     ANGL     3[BUS 3       13.800]1
+    3   -4.32800E-02 POWR     2[BUS 2       18.000]1   0.46893     POWR     3[BUS 3       13.800]1
+    5   -0.26676     VARS     2[BUS 2       18.000]1   8.95168E-02 VARS     3[BUS 3       13.800]1
+    7    0.94836     ETRM     2[BUS 2       18.000]1    1.0924     ETRM     3[BUS 3       13.800]1
+    9    0.59540     EFD      2[BUS 2       18.000]1    2.5675     EFD      3[BUS 3       13.800]1
+   11    2.61185E-08 PMEC     2[BUS 2       18.000]1   0.32506     PMEC     3[BUS 3       13.800]1
+   13    5.99897E-04 SPD      2[BUS 2       18.000]1   5.99977E-04 SPD      3[BUS 3       13.800]1
+   15    5.99862E-04 FREQ      2 [BUS 2       18.000]  5.99917E-04 FREQ      3 [BUS 3       13.800]
+   17    0.94836     VOLT      2 [BUS 2       18.000]   1.0924     VOLT      3 [BUS 3       13.800]
+   19     623.15     ANGL     2[BUS 2       18.000]1    636.75     ANGL     3[BUS 3       13.800]1
+   21    0.94836     VOLT      2 [BUS 2       18.000]   1.0924     VOLT      3 [BUS 3       13.800]
+   23    0.96594     VOLT      7 [BUS 7       230.00]   1.0857     VOLT      8 [BUS 8       230.00]
+   25     1.0879     VOLT      9 [BUS 9       230.00]   1.0867     VOLT     10 [10          34.500]
+   27     1.0857     VOLT     11 [11          138.00]   1.0867     VOLT     12 [12          34.500]
+   29    -4.3280     POWR      2 TO      7 CKT '1 '    -26.675     VARS      2 TO      7 CKT '1 '
+   31     46.893     POWR      3 TO      9 CKT '1 '     8.9516     VARS      3 TO      9 CKT '1 '
+   33     4.3280     POWR      7 TO      2 CKT '1 '     27.183     VARS      7 TO      2 CKT '1 '
+   35     0.0000     POWR      7 TO      8 CKT '1 '     0.0000     VARS      7 TO      8 CKT '1 '
+   37    -4.3280     POWR      7 TO      9 CKT '1 '    -27.183     VARS      7 TO      9 CKT '1 '
+   39     0.0000     POWR      8 TO      7 CKT '1 '     0.0000     VARS      8 TO      7 CKT '1 '
+   41    -31.409     POWR      8 TO      9 CKT '1 '    -10.469     VARS      8 TO      9 CKT '1 '
+   43     31.409     POWR      8 TO     11 CKT '1 '     10.469     VARS      8 TO     11 CKT '1 '
+   45    -46.893     POWR      9 TO      3 CKT '1 '    -7.8324     VARS      9 TO      3 CKT '1 '
+   47     4.8724     POWR      9 TO      7 CKT '1 '     19.044     VARS      9 TO      7 CKT '1 '
+   49     31.509     POWR      9 TO      8 CKT '1 '    -13.371     VARS      9 TO      8 CKT '1 '
+   51     10.511     POWR      9 TO     10 CKT '1 '     2.1591     VARS      9 TO     10 CKT '1 '
+   53    -10.511     POWR     10 TO      9 CKT '1 '    -2.1021     VARS     10 TO      9 CKT '1 '
+   55     10.511     POWR     10 TO     12 CKT '1 '     2.1021     VARS     10 TO     12 CKT '1 '
+   57    -31.409     POWR     11 TO      8 CKT '1 '    -10.469     VARS     11 TO      8 CKT '1 '
+   59    -10.511     POWR     12 TO     10 CKT '1 '    -2.1021     VARS     12 TO     10 CKT '1 '
 
-No power flow data changed for load "1" at bus 11 [11          138.00]
+100.081   624.24       637.14     -1.75733E-02  0.44482     -0.27909      0.10260
+    7    0.94585       1.0959      0.62145       2.5240      2.59709E-08  0.32506
+   13    7.28835E-04 -7.97107E-05  6.76897E-04  1.10227E-04  0.94585       1.0959
+   19     624.24       637.14      0.94585       1.0959      0.96429       1.0886
+   25     1.0907       1.0896       1.0886       1.0896      -1.7573      -27.909
+   31     44.482       10.260       1.7573       28.455       0.0000       0.0000
+   37    -1.7573      -28.455       0.0000       0.0000      -31.493      -10.498
+   43     31.493       10.498      -44.482      -9.2430       2.3496       20.549
+   49     31.593      -13.471       10.539       2.1649      -10.539      -2.1079
+   55     10.539       2.1079      -31.493      -10.498      -10.539      -2.1079
+
+*** Status of circuit "1" from 8 [BUS 8       230.00] to 7 [BUS 7       230.00] is set to in-service ***
+
+Channel output file is "C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\OUT\out_dyntools_demo_bus154_fault.out"
+
+6 diagonal and 6 off-diagonal elements
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+100.081   624.24     ANGL     2[BUS 2       18.000]1    637.14     ANGL     3[BUS 3       13.800]1
+    3    5.03803E-02 POWR     2[BUS 2       18.000]1   0.35373     POWR     3[BUS 3       13.800]1
+    5   -0.60040     VARS     2[BUS 2       18.000]1   0.29051     VARS     3[BUS 3       13.800]1
+    7    0.96807     ETRM     2[BUS 2       18.000]1    1.0776     ETRM     3[BUS 3       13.800]1
+    9    0.62145     EFD      2[BUS 2       18.000]1    2.5240     EFD      3[BUS 3       13.800]1
+   11    2.59622E-08 PMEC     2[BUS 2       18.000]1   0.32506     PMEC     3[BUS 3       13.800]1
+   13    7.28835E-04 SPD      2[BUS 2       18.000]1  -7.97107E-05 SPD      3[BUS 3       13.800]1
+   15    6.76897E-04 FREQ      2 [BUS 2       18.000]  1.10227E-04 FREQ      3 [BUS 3       13.800]
+   17    0.96807     VOLT      2 [BUS 2       18.000]   1.0776     VOLT      3 [BUS 3       13.800]
+   19     624.24     ANGL     2[BUS 2       18.000]1    637.14     ANGL     3[BUS 3       13.800]1
+   21    0.96807     VOLT      2 [BUS 2       18.000]   1.0776     VOLT      3 [BUS 3       13.800]
+   23     1.0068     VOLT      7 [BUS 7       230.00]   1.0287     VOLT      8 [BUS 8       230.00]
+   25     1.0620     VOLT      9 [BUS 9       230.00]   1.0609     VOLT     10 [10          34.500]
+   27     1.0287     VOLT     11 [11          138.00]   1.0609     VOLT     12 [12          34.500]
+   29     5.0380     POWR      2 TO      7 CKT '1 '    -60.040     VARS      2 TO      7 CKT '1 '
+   31     35.373     POWR      3 TO      9 CKT '1 '     29.051     VARS      3 TO      9 CKT '1 '
+   33    -5.0380     POWR      7 TO      2 CKT '1 '     62.461     VARS      7 TO      2 CKT '1 '
+   35     8.7038     POWR      7 TO      8 CKT '1 '    -46.993     VARS      7 TO      8 CKT '1 '
+   37    -3.6658     POWR      7 TO      9 CKT '1 '    -15.469     VARS      7 TO      9 CKT '1 '
+   39    -8.5671     POWR      8 TO      7 CKT '1 '     32.483     VARS      8 TO      7 CKT '1 '
+   41    -21.176     POWR      8 TO      9 CKT '1 '    -42.398     VARS      8 TO      9 CKT '1 '
+   43     29.743     POWR      8 TO     11 CKT '1 '     9.9147     VARS      8 TO     11 CKT '1 '
+   45    -35.373     POWR      9 TO      3 CKT '1 '    -27.994     VARS      9 TO      3 CKT '1 '
+   47     3.7798     POWR      9 TO      7 CKT '1 '     4.9693     VARS      9 TO      7 CKT '1 '
+   49     21.337     POWR      9 TO      8 CKT '1 '     20.916     VARS      9 TO      8 CKT '1 '
+   51     10.256     POWR      9 TO     10 CKT '1 '     2.1083     VARS      9 TO     10 CKT '1 '
+   53    -10.256     POWR     10 TO      9 CKT '1 '    -2.0513     VARS     10 TO      9 CKT '1 '
+   55     10.256     POWR     10 TO     12 CKT '1 '     2.0513     VARS     10 TO     12 CKT '1 '
+   57    -29.743     POWR     11 TO      8 CKT '1 '    -9.9147     VARS     11 TO      8 CKT '1 '
+   59    -10.256     POWR     12 TO     10 CKT '1 '    -2.0513     VARS     12 TO     10 CKT '1 '
+
+102.055   647.31       660.93     -1.09322E-03  0.40484     -0.57608      0.26492
+    7    0.97035       1.0745      0.60088       2.5696      2.21752E-08  0.32506
+   13    5.58508E-04  5.62618E-04  5.58995E-04  5.60915E-04  0.97035       1.0745
+   19     647.31       660.93      0.97035       1.0745       1.0075       1.0285
+   25     1.0603       1.0591       1.0285       1.0591     -0.10932      -57.608
+   31     40.484       26.492      0.10932       59.811       4.7388      -45.033
+   37    -4.8481      -14.778      -4.6194       30.400      -25.119      -40.312
+   43     29.738       9.9122      -40.484      -25.304       4.9584       4.2718
+   49     25.286       18.927       10.240       2.1048      -10.240      -2.0478
+   55     10.240       2.0478      -29.738      -9.9122      -10.240      -2.0478
+
+Channel output file is "C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\OUT\out_dyntools_demo_bus154_fault.out"
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+102.055   647.31     ANGL     2[BUS 2       18.000]1    660.93     ANGL     3[BUS 3       13.800]1
+    3   -1.09656E-03 POWR     2[BUS 2       18.000]1   0.40484     POWR     3[BUS 3       13.800]1
+    5   -0.57608     VARS     2[BUS 2       18.000]1   0.26492     VARS     3[BUS 3       13.800]1
+    7    0.97035     ETRM     2[BUS 2       18.000]1    1.0745     ETRM     3[BUS 3       13.800]1
+    9    0.60088     EFD      2[BUS 2       18.000]1    2.5696     EFD      3[BUS 3       13.800]1
+   11    2.21678E-08 PMEC     2[BUS 2       18.000]1   0.32506     PMEC     3[BUS 3       13.800]1
+   13    5.58508E-04 SPD      2[BUS 2       18.000]1   5.62618E-04 SPD      3[BUS 3       13.800]1
+   15    5.58995E-04 FREQ      2 [BUS 2       18.000]  5.60915E-04 FREQ      3 [BUS 3       13.800]
+   17    0.97035     VOLT      2 [BUS 2       18.000]   1.0745     VOLT      3 [BUS 3       13.800]
+   19     647.31     ANGL     2[BUS 2       18.000]1    660.93     ANGL     3[BUS 3       13.800]1
+   21    0.97035     VOLT      2 [BUS 2       18.000]   1.0745     VOLT      3 [BUS 3       13.800]
+   23     1.0075     VOLT      7 [BUS 7       230.00]   1.0285     VOLT      8 [BUS 8       230.00]
+   25     1.0603     VOLT      9 [BUS 9       230.00]   1.0591     VOLT     10 [10          34.500]
+   27     1.0285     VOLT     11 [11          138.00]   1.0591     VOLT     12 [12          34.500]
+   29   -0.10966     POWR      2 TO      7 CKT '1 '    -57.608     VARS      2 TO      7 CKT '1 '
+   31     40.484     POWR      3 TO      9 CKT '1 '     26.492     VARS      3 TO      9 CKT '1 '
+   33    0.10966     POWR      7 TO      2 CKT '1 '     59.810     VARS      7 TO      2 CKT '1 '
+   35     4.7385     POWR      7 TO      8 CKT '1 '    -45.032     VARS      7 TO      8 CKT '1 '
+   37    -4.8481     POWR      7 TO      9 CKT '1 '    -14.778     VARS      7 TO      9 CKT '1 '
+   39    -4.6190     POWR      8 TO      7 CKT '1 '     30.400     VARS      8 TO      7 CKT '1 '
+   41    -25.118     POWR      8 TO      9 CKT '1 '    -40.312     VARS      8 TO      9 CKT '1 '
+   43     29.737     POWR      8 TO     11 CKT '1 '     9.9125     VARS      8 TO     11 CKT '1 '
+   45    -40.484     POWR      9 TO      3 CKT '1 '    -25.304     VARS      9 TO      3 CKT '1 '
+   47     4.9584     POWR      9 TO      7 CKT '1 '     4.2718     VARS      9 TO      7 CKT '1 '
+   49     25.286     POWR      9 TO      8 CKT '1 '     18.927     VARS      9 TO      8 CKT '1 '
+   51     10.240     POWR      9 TO     10 CKT '1 '     2.1049     VARS      9 TO     10 CKT '1 '
+   53    -10.240     POWR     10 TO      9 CKT '1 '    -2.0479     VARS     10 TO      9 CKT '1 '
+   55     10.240     POWR     10 TO     12 CKT '1 '     2.0479     VARS     10 TO     12 CKT '1 '
+   57    -29.737     POWR     11 TO      8 CKT '1 '    -9.9125     VARS     11 TO      8 CKT '1 '
+   59    -10.240     POWR     12 TO     10 CKT '1 '    -2.0479     VARS     12 TO     10 CKT '1 '
+
+143.712   1176.5       1190.1     -1.29507E-03  0.40507     -0.57869      0.26818
+    7    0.96994       1.0748      0.59539       2.5675      7.91080E-10  0.32506
+   13    5.99832E-04  5.99881E-04  5.99842E-04  5.99842E-04  0.96994       1.0748
+   19     1176.5       1190.1      0.96994       1.0748       1.0072       1.0284
+   25     1.0604       1.0593       1.0284       1.0593     -0.12951      -57.869
+   31     40.507       26.818      0.12951       60.094       4.7257      -45.249
+   37    -4.8552      -14.844      -4.6048       30.631      -25.130      -40.542
+   43     29.735       9.9113      -40.507      -25.621       4.9669       4.3458
+   49     25.299       19.170       10.241       2.1050      -10.241      -2.0481
+   55     10.241       2.0481      -29.735      -9.9113      -10.241      -2.0481
+
+185.368   1716.3       1729.9     -1.29530E-03  0.40507     -0.57869      0.26818
+    7    0.96994       1.0748      0.59539       2.5675      2.82210E-11  0.32506
+   13    5.99787E-04  6.00011E-04  5.99842E-04  5.99842E-04  0.96994       1.0748
+   19     1716.3       1729.9      0.96994       1.0748       1.0072       1.0284
+   25     1.0604       1.0593       1.0284       1.0593     -0.12953      -57.869
+   31     40.507       26.818      0.12953       60.094       4.7257      -45.249
+   37    -4.8553      -14.844      -4.6048       30.631      -25.130      -40.542
+   43     29.735       9.9113      -40.507      -25.621       4.9669       4.3458
+   49     25.299       19.170       10.241       2.1050      -10.241      -2.0481
+   55     10.241       2.0481      -29.735      -9.9113      -10.241      -2.0481
+
+227.025   2256.2       2269.8     -1.29530E-03  0.40507     -0.57869      0.26818
+    7    0.96994       1.0748      0.59539       2.5675      1.00676E-12  0.32506
+   13    5.99785E-04  6.00021E-04  5.99842E-04  5.99844E-04  0.96994       1.0748
+   19     2256.2       2269.8      0.96994       1.0748       1.0072       1.0284
+   25     1.0604       1.0593       1.0284       1.0593     -0.12953      -57.869
+   31     40.507       26.818      0.12953       60.094       4.7257      -45.249
+   37    -4.8553      -14.844      -4.6048       30.631      -25.130      -40.542
+   43     29.735       9.9113      -40.507      -25.621       4.9669       4.3458
+   49     25.299       19.170       10.241       2.1050      -10.241      -2.0481
+   55     10.241       2.0481      -29.735      -9.9113      -10.241      -2.0481
+
+268.681   2796.1       2809.7     -1.29526E-03  0.40507     -0.57869      0.26818
+    7    0.96994       1.0748      0.59539       2.5675      3.59151E-14  0.32506
+   13    5.99783E-04  6.00010E-04  5.99842E-04  5.99846E-04  0.96994       1.0748
+   19     2796.1       2809.7      0.96994       1.0748       1.0072       1.0284
+   25     1.0604       1.0593       1.0284       1.0593     -0.12953      -57.869
+   31     40.507       26.818      0.12953       60.094       4.7257      -45.249
+   37    -4.8553      -14.844      -4.6048       30.631      -25.130      -40.542
+   43     29.735       9.9113      -40.507      -25.621       4.9669       4.3458
+   49     25.299       19.170       10.241       2.1050      -10.241      -2.0481
+   55     10.241       2.0481      -29.735      -9.9113      -10.241      -2.0481
+
+   TIME X- VALUE --X X--------- IDENTIFIER ---------X X- VALUE --X X--------- IDENTIFIER ---------X
+300.007   3202.0     ANGL     2[BUS 2       18.000]1    3215.6     ANGL     3[BUS 3       13.800]1
+    3   -1.29533E-03 POWR     2[BUS 2       18.000]1   0.40507     POWR     3[BUS 3       13.800]1
+    5   -0.57869     VARS     2[BUS 2       18.000]1   0.26818     VARS     3[BUS 3       13.800]1
+    7    0.96995     ETRM     2[BUS 2       18.000]1    1.0748     ETRM     3[BUS 3       13.800]1
+    9    0.59539     EFD      2[BUS 2       18.000]1    2.5675     EFD      3[BUS 3       13.800]1
+   11    2.92850E-15 PMEC     2[BUS 2       18.000]1   0.32506     PMEC     3[BUS 3       13.800]1
+   13    5.99786E-04 SPD      2[BUS 2       18.000]1   6.00014E-04 SPD      3[BUS 3       13.800]1
+   15    5.99838E-04 FREQ      2 [BUS 2       18.000]  5.99841E-04 FREQ      3 [BUS 3       13.800]
+   17    0.96995     VOLT      2 [BUS 2       18.000]   1.0748     VOLT      3 [BUS 3       13.800]
+   19     3202.0     ANGL     2[BUS 2       18.000]1    3215.6     ANGL     3[BUS 3       13.800]1
+   21    0.96995     VOLT      2 [BUS 2       18.000]   1.0748     VOLT      3 [BUS 3       13.800]
+   23     1.0072     VOLT      7 [BUS 7       230.00]   1.0284     VOLT      8 [BUS 8       230.00]
+   25     1.0604     VOLT      9 [BUS 9       230.00]   1.0593     VOLT     10 [10          34.500]
+   27     1.0284     VOLT     11 [11          138.00]   1.0593     VOLT     12 [12          34.500]
+   29   -0.12953     POWR      2 TO      7 CKT '1 '    -57.869     VARS      2 TO      7 CKT '1 '
+   31     40.507     POWR      3 TO      9 CKT '1 '     26.818     VARS      3 TO      9 CKT '1 '
+   33    0.12953     POWR      7 TO      2 CKT '1 '     60.094     VARS      7 TO      2 CKT '1 '
+   35     4.7257     POWR      7 TO      8 CKT '1 '    -45.249     VARS      7 TO      8 CKT '1 '
+   37    -4.8553     POWR      7 TO      9 CKT '1 '    -14.844     VARS      7 TO      9 CKT '1 '
+   39    -4.6048     POWR      8 TO      7 CKT '1 '     30.631     VARS      8 TO      7 CKT '1 '
+   41    -25.130     POWR      8 TO      9 CKT '1 '    -40.542     VARS      8 TO      9 CKT '1 '
+   43     29.735     POWR      8 TO     11 CKT '1 '     9.9113     VARS      8 TO     11 CKT '1 '
+   45    -40.507     POWR      9 TO      3 CKT '1 '    -25.621     VARS      9 TO      3 CKT '1 '
+   47     4.9669     POWR      9 TO      7 CKT '1 '     4.3458     VARS      9 TO      7 CKT '1 '
+   49     25.299     POWR      9 TO      8 CKT '1 '     19.170     VARS      9 TO      8 CKT '1 '
+   51     10.241     POWR      9 TO     10 CKT '1 '     2.1050     VARS      9 TO     10 CKT '1 '
+   53    -10.241     POWR     10 TO      9 CKT '1 '    -2.0481     VARS     10 TO      9 CKT '1 '
+   55     10.241     POWR     10 TO     12 CKT '1 '     2.0481     VARS     10 TO     12 CKT '1 '
+   57    -29.735     POWR     11 TO      8 CKT '1 '    -9.9113     VARS     11 TO      8 CKT '1 '
+   59    -10.241     POWR     12 TO     10 CKT '1 '    -2.0481     VARS     12 TO     10 CKT '1 '
+
+** LINES PER PAGE for REPORT WINDOW set to 10000000
