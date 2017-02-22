@@ -1,0 +1,8 @@
+<Scenario RootPath="C:\Program Files (x86)\PTI\PSSEXplore34\Example\" CreationDate="WED, FEB 22 2017  10:36" CreatedBy="jonathans" ChangeDate="WED, FEB 22 2017  11:43" ChangedBy="jonathans" Name="IEEE39" Version="3.1.2" PSSEVersion="34.0.2" StartupGroup="Default Group">
+   <Group Name="Default Group">
+      <File Name="C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\IN\IEEE39\IEEE39.sav" Type="SAV" Load="1" Args="" />
+      <File Name="C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\IN\IEEE39\IEEE39.snp" Type="SNP" Load="2" Args="" />
+      <File Name="C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\IN\IEEE39\IEEE39.dyr" Type="DYR" Load="0" Args=",,,,,," />
+      <File Name="C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\IN\IEEE39\IEEE39.sld" Type="SLD" Load="3" Args="" />
+   </Group>
+</Scenario>

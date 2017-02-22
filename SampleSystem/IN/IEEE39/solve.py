@@ -1,0 +1,12 @@
+# File:"C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\IN\IEEE39\solve.py", generated on WED, FEB 22 2017  13:40, PSS(R)E release 34.00.02
+psspy.fact()
+psspy.tysl(1)
+psspy.fact()
+psspy.tysl(0)
+psspy.fact()
+psspy.tysl(1)
+psspy.bus_chng_3(38,[_i,_i,_i,_i],[_f, 1.0,_f,_f,_f,_f,_f],_s)
+psspy.fact()
+psspy.fact()
+psspy.tysl(1)
+psspy.closediagfile()

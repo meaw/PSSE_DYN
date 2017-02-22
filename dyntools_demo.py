@@ -88,7 +88,7 @@ def get_demotest_file_names(outpath):
 
 def run_savnw_simulation(datapath, outfile1, outfile2, outfile3, prgfile):
     _F1_start=100
-    _F1_end=100.05;
+    _F1_end=100+70*1/60.0;
 
     _F2_start = 300
     _F2_end = 400;
@@ -130,7 +130,8 @@ def run_savnw_simulation(datapath, outfile1, outfile2, outfile3, prgfile):
 
     businfo = subsystem_info('bus', ['NUMBER', 'NAME', 'PU'], sid=-1)
     print businfo
-    psspy.dist_branch_trip(8, 7, '1')
+    psspy.dist_branch_fault(8,9, '1',3,0.0,[0.0,0.000001])
+    ##psspy.dist_branch_trip(8, 7, '1')
     ##psspy.load_chng_5(11, r"""1""", [0, _i, _i, _i, _i, _i, _i], [_f, _f, _f, _f, _f, _f, _f, _f])
     businfo = subsystem_info('bus', ['NUMBER', 'NAME', 'PU'], sid=-1)
     print businfo
@@ -141,8 +142,9 @@ def run_savnw_simulation(datapath, outfile1, outfile2, outfile3, prgfile):
 
 
 
-    psspy.dist_branch_close(8,7,'1')
+    #psspy.dist_branch_close(8,7,'1')
    ## psspy.load_chng_5(11, r"""1""", [1, _i, _i, _i, _i, _i, _i], [_f, _f, _f, _f, _f, _f, _f, _f])
+    psspy.dist_clear_fault(1)
     psspy.run(0, _F1_end+2.0, 5000, 1, 0)
     businfo = subsystem_info('bus', ['NUMBER', 'NAME', 'PU'], sid=-1)
     print businfo
@@ -338,6 +340,7 @@ def format_label(input_label):
 
 def plot_qt(plottype,title="",filename="out.png",list_buses=[], t_start=-1,t_len=10000):
     import numpy as np
+    import math
     import matplotlib.pyplot as plt
     #plottype=upper(plottype)
     if (plottype=="V"):
@@ -369,14 +372,20 @@ def plot_qt(plottype,title="",filename="out.png",list_buses=[], t_start=-1,t_len
 
     timect = a_TEMP[1,0] - a_TEMP[0,0]
 
-    startpos = t_start / timect;
+    startpos =math.floor( t_start / timect);
+
 
     if startpos<0:
         startpos=0;
 
-    endpos = t_len / timect+startpos;
+    endpos = math.floor( t_len / timect)+startpos;
+
+
     if endpos>len(a_TEMP[:, 1]):
         endpos=len(a_TEMP[:, 1]);
+
+    startpos = int(startpos)
+    endpos = int(endpos)
 
     if (len(list_buses)==0):
         for xi in range(1, len(a_TEMP[1, :])):
@@ -417,25 +426,27 @@ def test2_subplots_one_trace(outpath=None, show=True):
     plot_qt("Q","Q at load buses","Q_Load.png", [ 10, 16])
     plot_qt("Q","Q flows between buses", "Q_Buses.png", [ 6, 7, 13])
 '''
+    tstart=99.99
+    tlen = 5.0
 
-    plot_qt("V", "", "V_all.png")
-    plot_qt("V", "Bus voltages", "V_filtered.png", [3, 4, 5, 6, 7, 8, 9, 10])
+    plot_qt("V", "", "V_all.png",[],tstart,tlen)
+    plot_qt("V", "Bus voltages", "V_filtered.png", [3, 4, 5, 6, 7, 8, 9, 10],tstart,tlen)
 
-    plot_qt("F", "", "F_all.png")
-    plot_qt("F", "Bus frequencies", "F_filtered.png", [1, 2])
+    plot_qt("F", "", "F_all.png",[],tstart,tlen)
+    plot_qt("F", "Bus frequencies", "F_filtered.png", [1, 2],tstart,tlen)
 
-    plot_qt("A", "", "A_all.png")
-    plot_qt("A", "Bus angles relative to BUS 2", "A_filtered.png", [1, 2])
+    plot_qt("A", "", "A_all.png",[],tstart,tlen)
+    plot_qt("A", "Bus angles relative to BUS 2", "A_filtered.png", [1, 2],tstart,tlen)
 
-    plot_qt("P", "", "P_all.png")
-    plot_qt("P", "P at generation buses", "P_Gen.png", [3, 4])
-    plot_qt("P", "P at load buses", "P_Load.png", [10, 16])
-    plot_qt("P", "P flows between buses", "P_Buses.png", [6, 7, 13])
+    plot_qt("P", "", "P_all.png",[],tstart,tlen)
+    plot_qt("P", "P at generation buses", "P_Gen.png", [3, 4],tstart,tlen)
+    plot_qt("P", "P at load buses", "P_Load.png", [10, 16],tstart,tlen)
+    plot_qt("P", "P flows between buses", "P_Buses.png", [6, 7, 13],tstart,tlen)
 
-    plot_qt("Q", "", "Q_all.png")
-    plot_qt("Q", "Q at generation buses", "Q_Gen.png", [3, 4])
-    plot_qt("Q", "Q at load buses", "Q_Load.png", [10, 16])
-    plot_qt("Q", "Q flows between buses", "Q_Buses.png", [6, 7, 13],100,10)
+    plot_qt("Q", "", "Q_all.png",[],tstart,tlen)
+    plot_qt("Q", "Q at generation buses", "Q_Gen.png", [3, 4],tstart,tlen)
+    plot_qt("Q", "Q at load buses", "Q_Load.png", [10, 16],tstart,tlen)
+    plot_qt("Q", "Q flows between buses", "Q_Buses.png", [6, 7, 13],tstart,tlen)
 
     print 'Write Data//'
 

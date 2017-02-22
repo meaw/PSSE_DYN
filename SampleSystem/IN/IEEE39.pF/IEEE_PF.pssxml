@@ -1,0 +1,8 @@
+<Scenario RootPath="C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\IN\" CreationDate="WED, FEB 22 2017  14:46" CreatedBy="jonathans" ChangeDate="WED, FEB 22 2017  14:54" ChangedBy="jonathans" Name="IEEE_PF.pssxml" Version="3.1.2" PSSEVersion="34.0.2" StartupGroup="Default Group">
+   <Group Name="Default Group">
+      <File Name="C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\IN\IEEE39.pF\IEEE39.sav" Type="SAV" Load="1" Args="" />
+      <File Name="C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\IN\IEEE39.pF\IEEE39.snp" Type="SNP" Load="2" Args="" />
+      <File Name="C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\IN\IEEE39.pF\IEEE39.dyr" Type="DYR" Load="0" Args=",,,,,," />
+      <File Name="C:\Users\jonathans\PycharmProjects\PSSE_DYN\SampleSystem\IN\IEEE39.pF\IEEE39.sld" Type="SLD" Load="3" Args="" />
+   </Group>
+</Scenario>
